@@ -1,0 +1,144 @@
+/* ==========================================================================
+   ELECTRO — design token layer
+   --------------------------------------------------------------------------
+   Compiled with the Tailwind CLI (v4) -> assets/css/site.css, purged + minified.
+   Everything visual derives from the single @theme block below.
+
+   HOW TO CHANGE THE HEADING FONT (3 edits, nothing else):
+     1. Drop the new .woff2 in /assets/fonts/ and update the @font-face `src`
+        for "Sora" in base.css (rename the family there too).
+     2. Change the --font-heading line below to the new family name.
+     3. Update the <link rel="preload" ... sora-var-latin.woff2> href in
+        partials/head-assets.html.
+   Every heading uses the `font-heading` utility / var(--font-heading): no
+   component hard-codes a family.
+   ========================================================================== */
+
+@import "tailwindcss" source(none);   /* only scan what we list below — the repo also holds hand-authored static pages */
+
+@source "../../../src";
+@source "../../js";
+
+@theme static {
+  /* ---- Colour — brand values verbatim from AGENTS.md ------------------- */
+  --color-*: initial;
+
+  --color-teal:      #00B3A7;  /* Primary Teal — logo field, actions, glows        */
+  --color-teal-deep: #04302D;  /* Deep Teal — dark hero / section backgrounds       */
+  --color-amber:     #FAB605;  /* Accent Amber — gradient start (never flat fill)   */
+  --color-gold:      #FBC619;  /* Accent Gold  — gradient end                       */
+  --color-charcoal:  #333333;  /* headings, nav, primary text                       */
+  --color-slate:     #6B6B6B;  /* secondary text, captions                          */
+  --color-offwhite:  #F5F7F7;  /* section backgrounds                               */
+  --color-white:     #FFFFFF;  /* cards, base background                            */
+
+  /* Derived — NOT new brand colours. They exist only to meet WCAG AA.
+     teal-ink  : brand teal is 2.62:1 on white (fails). This is 5.22:1 on white,
+                 4.85:1 on off-white. Use for teal TEXT/LINKS on light surfaces.
+     teal-night: the hero floor — Deep Teal pushed toward black so a single
+                 spotlight reads as a spotlight. White is 17.9:1 on it.        */
+  --color-teal-ink:   #007A72;
+  --color-teal-night: #021B19;
+
+  /* Contrast reference (computed):
+       charcoal on amber 7.07 · charcoal on gold 7.94 · amber on teal-deep 8.02
+       white on teal-deep 14.33 · teal on teal-night 6.82 · slate on white 5.33 */
+
+  /* ---- Typography ------------------------------------------------------- */
+  --font-*: initial;
+  --font-heading: "Sora", "Sora Fallback", sans-serif;
+  --font-body:    "Inter", "Inter Fallback", sans-serif;
+
+  --text-*: initial;
+  --text-xs:   0.75rem;
+  --text-xs--line-height: 1.5;
+  --text-sm:   0.875rem;
+  --text-sm--line-height: 1.5;
+  --text-base: 1.0625rem;                           /* 17px — Apple's body size */
+  --text-base--line-height: 1.55;
+  --text-lg:   1.1875rem;
+  --text-lg--line-height: 1.5;
+  --text-lede: clamp(1.1875rem, 1.08rem + 0.5vw, 1.5rem);
+  --text-lede--line-height: 1.42;
+  --text-h4:   1.25rem;
+  --text-h4--line-height: 1.3;
+  --text-h3:   clamp(1.375rem, 1.2rem + 0.7vw, 1.75rem);
+  --text-h3--line-height: 1.2;
+  --text-h3--letter-spacing: -0.02em;
+  --text-h2:   clamp(2.125rem, 1.45rem + 2.7vw, 3.75rem);
+  --text-h2--line-height: 1.06;
+  --text-h2--letter-spacing: -0.032em;
+  --text-h1:   clamp(2.75rem, 1.7rem + 4.2vw, 5.5rem);
+  --text-h1--line-height: 1.03;
+  --text-h1--letter-spacing: -0.036em;
+  --text-display: clamp(3.5rem, 1.5rem + 7.6vw, 8.5rem);
+  --text-display--line-height: 0.98;
+  --text-display--letter-spacing: -0.045em;
+  --text-stat: clamp(3.5rem, 2rem + 6vw, 7.5rem);
+  --text-stat--line-height: 0.95;
+  --text-stat--letter-spacing: -0.05em;
+
+  /* ---- Spacing — 4px base + named rhythm -------------------------------- */
+  --spacing: 0.25rem;
+  --spacing-section: clamp(6rem, 3.6rem + 7vw, 10rem);   /* 96 -> 160px */
+  --spacing-block:   clamp(3rem, 2rem + 3vw, 5rem);
+  --spacing-gutter:  clamp(1.25rem, 0.6rem + 2.8vw, 3rem);
+  --spacing-nav:     5.5rem;
+
+  --container-reading: 61.25rem;   /* 980px */
+  --container-wide:    90rem;      /* 1440px */
+
+  --breakpoint-*: initial;
+  --breakpoint-sm: 40rem;
+  --breakpoint-md: 48rem;
+  --breakpoint-lg: 64rem;
+  --breakpoint-xl: 80rem;
+
+  /* ---- Radius — one continuous-corner scale ----------------------------- */
+  --radius-*: initial;
+  --radius-xs:   8px;
+  --radius-sm:   12px;
+  --radius-md:   20px;
+  --radius-lg:   28px;
+  --radius-pill: 9999px;
+
+  /* ---- Elevation -------------------------------------------------------- */
+  --shadow-*: initial;
+  --shadow-card:  0 1px 0 0 rgb(255 255 255 / 0.07) inset, 0 30px 60px -30px rgb(2 27 25 / 0.55);
+  --shadow-lift:  0 1px 0 0 rgb(255 255 255 / 0.1) inset, 0 40px 80px -28px rgb(0 179 167 / 0.35);
+  --shadow-glass: 0 1px 0 0 rgb(255 255 255 / 0.18) inset, 0 12px 40px -12px rgb(2 27 25 / 0.5);
+
+  /* ---- Motion — mirrored in assets/js/motion-tokens.js (source of truth) - */
+  --duration-instant: 80ms;
+  --duration-fast:    180ms;
+  --duration-normal:  350ms;
+  --duration-slow:    600ms;
+  --duration-crawl:   1000ms;
+
+  --ease-*: initial;
+  --ease-smooth: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-sharp:  cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-apple:  cubic-bezier(0.25, 0.1, 0.25, 1);
+  --ease-linear: linear;
+
+  --distance-xs: 4px;
+  --distance-sm: 8px;
+  --distance-md: 16px;
+  --distance-lg: 24px;
+  --distance-xl: 48px;
+
+  --scale-subtle: 0.98;
+  --scale-press:  0.95;
+  --scale-pop:    1.04;
+}
+
+/* Spring curves as CSS linear() — generated by build/gen-springs.mjs from the
+   same configs the JS engine uses. */
+@import "./springs.css";
+
+@import "./base.css";
+@import "./nav.css";
+@import "./hero.css";
+@import "./tour.css";
+@import "./index.css";
+@import "./sections.css";

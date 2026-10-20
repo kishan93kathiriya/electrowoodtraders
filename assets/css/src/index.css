@@ -1,0 +1,83 @@
+/* ==========================================================================
+   ELECTRO — product index: search, range chips, 35 family cards (FLIP-filtered)
+   Without JS every card is simply visible and the tools are not rendered.
+   ========================================================================== */
+
+@layer components {
+  .index { padding-block: var(--spacing-section); }
+
+  .index__tools { display: none; margin-top: var(--spacing-block); gap: 1.25rem; flex-direction: column; }
+  .js .index__tools { display: flex; }
+  @media (min-width: 64rem) { .js .index__tools { flex-direction: row; align-items: flex-end; justify-content: space-between; gap: 2rem; } }
+
+  .index__search { flex: 1 1 22rem; max-width: 30rem; }
+  .index__search label { display: block; margin-bottom: 0.5rem; font: 600 var(--text-sm)/1.2 var(--font-heading); color: var(--fg); }
+  .index__search input {
+    width: 100%; min-height: 3.25rem; padding: 0 1.25rem; border-radius: var(--radius-pill);
+    font: 500 1rem/1 var(--font-body); color: var(--fg); background: var(--color-white);
+    border: 1px solid rgb(0 0 0 / 0.16);
+    transition: border-color var(--duration-fast) var(--ease-sharp), box-shadow var(--duration-normal) var(--ease-smooth);
+  }
+  .index__search input::placeholder { color: var(--color-slate); }                 /* 5.33:1 on white */
+  .index__search input:hover { border-color: rgb(0 0 0 / 0.32); }
+
+  .index__chips { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+  .chip {
+    --s: 1;
+    min-height: 2.75rem; padding: 0 1.05rem; display: inline-flex; align-items: center; gap: 0.5rem;
+    border-radius: var(--radius-pill); border: 1px solid rgb(0 0 0 / 0.16);
+    font: 600 0.875rem/1 var(--font-heading); color: var(--fg); background: var(--color-white);
+    transform: scale(var(--s));
+    transition: transform var(--spring-snappy-duration) var(--spring-snappy), background-color var(--duration-fast) var(--ease-sharp), color var(--duration-fast) var(--ease-sharp), border-color var(--duration-fast) var(--ease-sharp);
+  }
+  .chip span { font-weight: 500; font-variant-numeric: tabular-nums; color: var(--color-slate); transition: color var(--duration-fast) var(--ease-sharp); }
+  .chip:active { --s: var(--scale-subtle); transition-duration: var(--duration-instant); }
+  @media (hover: hover) and (pointer: fine) { .chip:hover { border-color: rgb(0 0 0 / 0.4); } }
+  .chip[aria-pressed="true"] { background: var(--color-charcoal); border-color: var(--color-charcoal); color: #fff; }
+  .chip[aria-pressed="true"] span { color: rgb(255 255 255 / 0.74); }
+
+  .index__grid { display: grid; gap: 1rem; margin-top: 2rem; grid-template-columns: minmax(0, 1fr); }
+  @media (min-width: 40rem) { .index__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media (min-width: 64rem) { .index__grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.25rem; } }
+  @media (min-width: 80rem) { .index__grid { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+
+  .pcard {
+    --px: 30%; --py: 20%; --lift: 0px;
+    position: relative; display: flex; flex-direction: column; padding: 1.4rem 1.4rem 1.25rem;
+    border-radius: var(--radius-md); background: var(--color-white);
+    background-image: radial-gradient(120% 90% at var(--px) var(--py), rgb(0 179 167 / 0.09), transparent 60%);
+    border: 1px solid rgb(0 0 0 / 0.09);
+    transform: translate3d(0, var(--lift), 0);
+    transition: transform var(--spring-snappy-duration) var(--spring-snappy), box-shadow var(--duration-slow) var(--ease-smooth), border-color var(--duration-normal) var(--ease-smooth), --px 380ms var(--ease-smooth), --py 380ms var(--ease-smooth);
+  }
+  @media (hover: hover) and (pointer: fine) {
+    .pcard:hover { --lift: -3px; border-color: rgb(0 122 114 / 0.4); box-shadow: 0 30px 50px -30px rgb(4 48 45 / 0.35); }
+  }
+  .pcard.is-out { opacity: 0; transform: scale(0.96); transition: opacity 140ms var(--ease-smooth), transform 140ms var(--ease-smooth); pointer-events: none; }
+  /* catalogue crop, bleeding to the card edge (card padding = 1.4rem; the 1px border sits outside the padding box) */
+  .pcard__img {
+    display: block; width: calc(100% + 2.8rem); max-width: none; margin: -1.4rem -1.4rem 1.1rem;
+    aspect-ratio: 8 / 5; object-fit: cover; background: var(--color-offwhite);
+    border-radius: calc(var(--radius-md) - 1px) calc(var(--radius-md) - 1px) 0 0;
+  }
+  .pcard__link::after { content: ""; position: absolute; inset: 0; border-radius: inherit; }
+  .pcard__link:focus-visible { outline-offset: -4px; border-radius: var(--radius-md); }
+  .pcard__h { font: 700 1.125rem/1.25 var(--font-heading); letter-spacing: -0.02em; color: var(--color-charcoal); }
+  .pcard__cat { margin-top: 0.5rem; font-size: 0.8125rem; line-height: 1.4; color: var(--color-slate); }
+  .pcard__series { font-weight: 600; color: var(--color-teal-ink); }
+  .pcard__fin { display: flex; flex-wrap: wrap; gap: 0.35rem; margin-top: 0.85rem; }
+  .pcard__fin li { padding: 0.28rem 0.6rem; border-radius: var(--radius-pill); background: var(--color-offwhite); font: 500 0.75rem/1.2 var(--font-body); color: var(--color-charcoal); }
+  .pcard__stats { display: flex; justify-content: space-between; gap: 0.75rem; margin-top: auto; padding-top: 1.1rem; font: 600 0.8125rem/1.3 var(--font-heading); color: var(--color-charcoal); font-variant-numeric: tabular-nums; }
+  .pcard__stats span:first-child { color: var(--color-slate); font-weight: 500; }
+  .pcard__skus { margin-top: 0.55rem; padding-top: 0.7rem; border-top: 1px solid rgb(0 0 0 / 0.08); display: flex; flex-wrap: wrap; gap: 0.3rem 0.5rem; }
+  .pcard__skus code { font: 500 0.75rem/1.3 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; color: var(--color-slate); }
+
+  .index__empty { margin-top: 2rem; padding: 2rem; border-radius: var(--radius-md); background: var(--color-white); border: 1px dashed rgb(0 0 0 / 0.2); color: var(--color-slate); }
+  .index__empty code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; color: var(--color-charcoal); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pcard, .pcard:hover { transform: none; transition: border-color var(--duration-fast) linear; }
+  .pcard.is-out { transform: none; transition: opacity var(--duration-fast) linear; }
+  .chip, .chip:active { transform: none; transition: background-color var(--duration-fast) linear; }
+}

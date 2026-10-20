@@ -1,0 +1,312 @@
+/* ==========================================================================
+   ELECTRO — hero "The Dark Room"
+   One light source. A real switch (DOM, keyboard-operable) turns the room on.
+   Three.js is decoration only: the canvas and stage are aria-hidden and every
+   word on screen is real, crawlable markup. The still image is the fallback.
+
+   State lives in two attributes on #hero:
+     data-light="off|on"   — the switch
+     --p (on .hero__pin)   — scroll progress 0..1 through the pinned chapter
+   ========================================================================== */
+
+@layer components {
+  .hero {
+    --pin-h: max(100svh, 36rem);
+    --hero-travel: 0px;                       /* JS adds .hero--chapter when the 3D story can run */
+    position: relative;
+    height: calc(var(--pin-h) + var(--hero-travel));
+    background: var(--color-teal-night);
+  }
+  .hero--chapter { --hero-travel: 470svh; }   /* 40 intro + 6 × 65 beats + 40 outro */
+
+  .hero__pin {
+    --p: 0;
+    position: sticky; top: 0;
+    height: var(--pin-h);
+    overflow: clip;
+  }
+
+  /* ---- Stage: still → canvas → light ------------------------------------ */
+  .hero__stage {
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(60% 55% at 24% 6%, rgb(0 179 167 / 0.2), transparent 62%),
+      radial-gradient(46% 42% at 74% 64%, rgb(0 179 167 / 0.1), transparent 70%),
+      var(--color-teal-night);
+  }
+  .hero__still-wrap { position: absolute; inset: 0; }
+  .hero__still {
+    width: 100%; height: 100%;
+    object-fit: cover; object-position: 62% 50%;
+    animation: still-in 700ms var(--ease-smooth) both;
+    transition: opacity var(--duration-slow) var(--ease-smooth), filter var(--duration-slow) var(--ease-smooth);
+  }
+  @keyframes still-in { from { opacity: 0.35; filter: brightness(0.65); } }
+  .hero[data-light="off"] .hero__still { filter: brightness(0.42) saturate(0.7); }   /* the still is the lit overview */
+
+  .hero__canvas {
+    position: absolute; inset: 0; width: 100%; height: 100%;
+    opacity: 0;
+    touch-action: pan-y;                      /* vertical swipes keep scrolling the page */
+    transition: opacity var(--duration-slow) var(--ease-smooth);
+  }
+  .hero.is-3d .hero__canvas { opacity: 1; }
+  .hero.is-3d .hero__still { opacity: 0; transition-delay: var(--duration-slow); }
+
+  /* legibility scrim: keeps text AA over the beam in every light state */
+  .hero__stage::after {
+    content: ""; position: absolute; inset: 0; pointer-events: none;
+    background: linear-gradient(90deg, rgb(2 27 25 / 0.78) 0%, rgb(2 27 25 / 0.5) 34%, rgb(2 27 25 / 0) 62%);
+  }
+
+  /* a pass of light across the headline on load */
+  .hero__sweep {
+    position: absolute; inset: -10% -30%; pointer-events: none;
+    background: linear-gradient(104deg, transparent 38%, rgb(0 179 167 / 0.2) 50%, transparent 62%);
+    transform: translate3d(-65%, 0, 0);
+    animation: sweep 2200ms var(--ease-smooth) 250ms both;
+  }
+  @keyframes sweep { to { transform: translate3d(65%, 0, 0); } }
+
+  /* the practical light — amber bloom that "powers on" with the switch */
+  .hero__bloom {
+    position: absolute; left: var(--bloom-x, 72%); top: var(--bloom-y, 42%);
+    width: min(95vmin, 74rem); aspect-ratio: 1; border-radius: 50%;
+    pointer-events: none; mix-blend-mode: screen;
+    background: radial-gradient(closest-side, rgb(250 182 5 / 0.2), rgb(251 198 25 / 0.07) 42%, rgb(250 182 5 / 0) 72%);
+    opacity: 0;
+    transform: translate3d(-50%, -50%, 0) scale(0.55);
+    transition: opacity var(--duration-slow) var(--ease-smooth), transform var(--spring-gentle-duration) var(--spring-gentle);
+  }
+  .hero[data-light="on"] .hero__bloom { opacity: 1; transform: translate3d(-50%, -50%, 0) scale(1); }
+
+  /* ---- Foreground: fades as the chapter begins ------------------------- */
+  .hero__fade {
+    position: absolute; inset: 0; z-index: 3;
+    pointer-events: none;
+    --gone: clamp(0, var(--p) * 11, 1);
+    opacity: calc(1 - var(--gone));
+    transform: translate3d(0, calc(var(--gone) * -28px), 0);
+  }
+  .hero__fade[data-away="true"] { visibility: hidden; }
+  .hero__fade a, .hero__fade button { pointer-events: auto; }
+
+  .hero__inner {
+    height: 100%;
+    display: grid;
+    grid-template-columns: minmax(0, 1.08fr) minmax(0, 1fr);
+    grid-template-rows: minmax(0, 1fr) auto;
+    column-gap: 2rem;
+    padding-top: var(--spacing-nav);
+    padding-bottom: 6.25rem;
+  }
+  .hero__copy { grid-column: 1; grid-row: 1; align-self: end; padding-bottom: 0.5rem; container-type: inline-size; }
+  .hero__anchor { grid-column: 2; grid-row: 1 / span 2; min-height: 0; }
+  .hero__switch { grid-column: 1; grid-row: 2; align-self: start; margin-top: 1.75rem; display: flex; align-items: center; gap: 1.1rem; flex-wrap: wrap; }
+
+  .hero__title {
+    /* scales with its own column AND the viewport height so it never collides with the nav */
+    font-size: clamp(2.75rem, min(15cqi, 11.5svh), 8.5rem);
+    line-height: 0.98;
+    letter-spacing: var(--text-display--letter-spacing);
+    color: rgb(255 255 255 / 0.9);
+    transition: color var(--duration-slow) var(--ease-smooth);
+  }
+  .hero[data-light="on"] .hero__title { color: #fff; }
+  .hero__kicker {
+    display: block;
+    margin-bottom: 1.4rem;
+    font: 600 clamp(0.875rem, 0.8rem + 0.35vw, 1.0625rem)/1.3 var(--font-heading);
+    letter-spacing: 0.01em;
+    color: var(--color-teal);                 /* 6.82:1 on teal-night */
+  }
+  .hero__line { display: block; overflow: hidden; padding-bottom: 0.1em; margin-bottom: -0.1em; }
+  .hero__line > span {
+    display: inline-block;
+    animation: rise 900ms var(--ease-smooth) both;
+    animation-delay: calc(120ms + var(--i, 0) * 100ms);
+  }
+  @keyframes rise { from { transform: translate3d(0, 110%, 0); } }
+
+  /* the filament: gradient underline that lights with the switch */
+  .hero__burn {
+    background-image: linear-gradient(90deg, var(--color-amber), var(--color-gold));
+    background-repeat: no-repeat;
+    background-position: 0 94%;
+    background-size: 0% 0.055em;
+    transition: background-size 1100ms var(--ease-smooth);
+  }
+  .hero[data-light="on"] .hero__burn { background-size: 100% 0.055em; }
+
+  .hero__lede {
+    margin-top: 1.75rem;
+    max-width: 30rem;
+    font-size: var(--text-lede);
+    line-height: var(--text-lede--line-height);
+    color: var(--fg-2);
+  }
+  .hero__ctas { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 2.25rem; }
+
+  .hero__creds { display: none; flex-wrap: wrap; gap: 0.4rem 1.25rem; margin-top: 2rem; font: 500 var(--text-sm)/1.4 var(--font-body); color: var(--fg-2); }
+  .hero__creds li { display: inline-flex; align-items: center; gap: 1.25rem; }
+  .hero__creds li + li::before { content: ""; width: 3px; height: 3px; border-radius: 50%; background: var(--color-teal); }
+
+  .rise { animation: fade-up 800ms var(--ease-smooth) both; animation-delay: calc(260ms + var(--i, 0) * 70ms); }
+  @keyframes fade-up { from { opacity: 0; transform: translate3d(0, var(--distance-md), 0); } }
+
+  /* ---- The switch (iOS-style toggle; the real control) ------------------ */
+  .toggle {
+    --s: 1;
+    display: inline-flex; align-items: center; gap: 0.95rem;
+    min-height: 3.25rem; padding: 0.4rem 1.35rem 0.4rem 0.45rem;
+    border-radius: var(--radius-pill);
+    transform: scale(var(--s));
+    transition: transform var(--spring-snappy-duration) var(--spring-snappy), background-color var(--duration-normal) var(--ease-smooth), border-color var(--duration-normal) var(--ease-smooth);
+  }
+  .toggle:hover { background: rgb(4 48 45 / 0.7); border-color: rgb(255 255 255 / 0.24); }
+  .toggle:active { --s: var(--scale-press); transition-duration: var(--duration-instant); }
+  .toggle__track {
+    position: relative; flex: none; width: 3.25rem; height: 2rem; border-radius: var(--radius-pill);
+    background: rgb(255 255 255 / 0.18);
+    box-shadow: inset 0 0 0 1px rgb(255 255 255 / 0.24);
+    transition: background-color var(--duration-normal) var(--ease-smooth), box-shadow var(--duration-slow) var(--ease-smooth);
+  }
+  .toggle__thumb {
+    position: absolute; top: 3px; left: 3px; width: 26px; height: 26px; border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 2px 6px rgb(0 0 0 / 0.35), 0 0 0 0.5px rgb(0 0 0 / 0.08);
+    transition: transform var(--spring-snappy-duration) var(--spring-snappy);
+  }
+  .toggle[aria-checked="true"] .toggle__track {
+    background: linear-gradient(115deg, var(--color-amber), var(--color-gold));
+    box-shadow: inset 0 0 0 1px rgb(255 255 255 / 0.3), 0 0 26px rgb(250 182 5 / 0.5);
+  }
+  .toggle[aria-checked="true"] .toggle__thumb { transform: translate3d(1.25rem, 0, 0); }
+  .toggle__text { display: grid; text-align: left; line-height: 1.15; }
+  .toggle__name { font: 600 0.9375rem/1.15 var(--font-heading); }
+  .toggle__state { font: 500 0.75rem/1.3 var(--font-body); color: var(--fg-2); }
+  .toggle[aria-checked="true"] .toggle__state { color: var(--color-amber); }   /* 8.0:1 on teal-night */
+
+  .hero__hint { font: 500 var(--text-sm)/1.4 var(--font-body); color: var(--fg-2); opacity: 0; animation: fade-in 900ms var(--ease-smooth) 3s forwards; }
+  .hero[data-touched="true"] .hero__hint { animation: none; opacity: 0; visibility: hidden; }
+  @keyframes fade-in { to { opacity: 1; } }
+
+  /* ---- Six ranges, revealed by the light --------------------------------- */
+  .hero__cats { display: none; position: absolute; left: 0; right: 0; bottom: 1.4rem; }
+  .hero__cats ul { display: flex; flex-wrap: wrap; gap: 0 1.9rem; }
+  .hero__cats a {
+    display: inline-block; padding: 0.55rem 0;
+    font: 500 var(--text-sm)/1.2 var(--font-body);
+    color: rgb(255 255 255 / 0.64);                      /* 7.5:1 — dim but always AA */
+    transform: translate3d(0, 6px, 0);
+    transition:
+      color var(--duration-slow) var(--ease-smooth) calc(var(--i, 0) * 60ms),
+      transform var(--spring-gentle-duration) var(--spring-gentle) calc(var(--i, 0) * 60ms);
+  }
+  .hero[data-light="on"] .hero__cats a { color: #fff; transform: none; }
+  .hero__cats a:hover { color: var(--color-amber); transition-delay: 0ms; }
+
+  .hero__cue {
+    position: absolute; right: var(--spacing-gutter); bottom: 1.6rem;
+    display: none; align-items: center; gap: 0.8rem;
+    font: 600 0.6875rem/1 var(--font-heading); letter-spacing: 0.14em; text-transform: uppercase;
+    color: rgb(255 255 255 / 0.62);
+  }
+  .hero__cue i { width: 1px; height: 2.4rem; background: linear-gradient(var(--color-teal), transparent); transform-origin: 50% 0; animation: cue 2400ms var(--ease-smooth) infinite; }
+  @keyframes cue { 0% { transform: scaleY(0); opacity: 1; } 55% { transform: scaleY(1); opacity: 1; } 100% { transform: scaleY(1); opacity: 0; } }
+
+  /* ---- Pause control (WCAG 2.2.2): only exists when the orbit is actually moving ----- */
+  .pausebtn {
+    --s: 1;
+    display: none; place-items: center; flex: none;
+    width: 3.25rem; height: 3.25rem; border-radius: 50%;
+    transform: scale(var(--s));
+    transition: transform var(--spring-snappy-duration) var(--spring-snappy), background-color var(--duration-fast) var(--ease-sharp);
+  }
+  .hero--chapter .pausebtn { display: grid; }
+  .pausebtn:hover { background: rgb(4 48 45 / 0.7); }
+  .pausebtn:active { --s: var(--scale-press); transition-duration: var(--duration-instant); }
+  .pausebtn svg { width: 1rem; height: 1rem; }
+  .pausebtn__play { display: none; }
+  .pausebtn[aria-pressed="true"] .pausebtn__play { display: block; }
+  .pausebtn[aria-pressed="true"] .pausebtn__pause { display: none; }
+
+  /* ---- Planet name tags + hover card: 3D decoration (real links live in .hero__cats and the tour) ---- */
+  .hero__plabels { position: absolute; inset: 0; z-index: 2; pointer-events: none; }
+  .plabel {
+    position: absolute; left: 0; top: 0; white-space: nowrap;
+    font: 600 0.75rem/1 var(--font-heading); letter-spacing: 0.02em;
+    color: rgb(255 255 255 / 0.68);                       /* 7.5:1 on teal-night */
+    text-shadow: 0 1px 10px rgb(2 27 25 / 0.95);
+    opacity: var(--lo, 0);
+    transform: translate3d(var(--lx, -999px), var(--ly, 0px), 0) translate(-50%, 0);
+    transition: color var(--duration-fast) var(--ease-sharp), opacity var(--duration-normal) var(--ease-smooth);
+  }
+  .plabel.is-hot { color: #fff; }
+  .pop {
+    position: absolute; left: 0; top: 0; z-index: 4; width: 17rem; padding: 1.1rem 1.2rem 1.25rem;
+    border-radius: var(--radius-md); pointer-events: none; color: #fff;
+    background: rgb(4 48 45 / 0.62);
+    -webkit-backdrop-filter: blur(12px) saturate(180%); backdrop-filter: blur(12px) saturate(180%);
+    border: 1px solid rgb(255 255 255 / 0.14);
+    box-shadow: var(--shadow-glass);
+    opacity: 0; transform: translate3d(var(--cx, 0px), var(--cy, 0px), 0) scale(0.96);
+    transform-origin: var(--ox, 0%) var(--oy, 100%);
+    transition: opacity 180ms var(--ease-smooth), transform 180ms var(--ease-smooth), backdrop-filter 180ms var(--ease-smooth), -webkit-backdrop-filter 180ms var(--ease-smooth);
+  }
+  .pop.is-on { opacity: 1; transform: translate3d(var(--cx, 0px), var(--cy, 0px), 0) scale(1); -webkit-backdrop-filter: blur(22px) saturate(180%); backdrop-filter: blur(22px) saturate(180%); }
+  .pop__n { font: 600 0.75rem/1 var(--font-heading); color: var(--color-teal); letter-spacing: 0.04em; }
+  .pop__h { margin-top: 0.55rem; font: 700 1.1rem/1.2 var(--font-heading); letter-spacing: -0.02em; }
+  .pop__meta { margin-top: 0.35rem; font-size: 0.8125rem; color: rgb(255 255 255 / 0.74); }
+  .pop__fams { margin-top: 0.8rem; display: grid; gap: 0.25rem; font-size: 0.8125rem; color: rgb(255 255 255 / 0.86); }
+  .pop__cta { margin-top: 0.9rem; font: 600 0.8125rem/1 var(--font-heading); color: var(--color-amber); }
+  @media (max-width: 63.99rem) { .hero__plabels { display: none; } }
+
+
+  /* ---- Responsive -------------------------------------------------------- */
+  @media (min-width: 48rem) {
+    .hero__creds { display: flex; }
+  }
+  @media (min-width: 64rem) {
+    .hero__cats { display: block; }
+    .hero--chapter .hero__cue { display: flex; }
+  }
+  @media (max-height: 46rem) {
+    .hero__creds { display: none; }
+    .hero__lede { margin-top: 1rem; }
+    .hero__ctas { margin-top: 1.4rem; }
+    .hero__switch { margin-top: 1.1rem; }
+    .hero__inner { padding-bottom: 4.5rem; }
+  }
+  @media (max-height: 40rem) {
+    .hero__cats { display: none; }
+  }
+  @media (max-width: 47.99rem), (max-width: 63.99rem) and (orientation: portrait) {
+    .hero__inner {
+      grid-template-columns: minmax(0, 1fr);
+      grid-template-rows: auto minmax(0, 1fr) auto;
+      padding-top: 5.5rem; padding-bottom: 1.75rem;
+    }
+    .hero__copy { grid-row: 1; align-self: start; }
+    .hero__anchor { grid-column: 1; grid-row: 2; }
+    .hero__switch { grid-column: 1; grid-row: 3; margin-top: 0; justify-content: center; }
+    .hero__lede { margin-top: 1.1rem; font-size: 1.0625rem; max-width: 22rem; }
+    .hero__ctas { margin-top: 1.4rem; }
+    .hero__hint { display: none; }
+    .hero__kicker { margin-bottom: 0.9rem; }
+  }
+}
+
+/* Reduced motion: still image, no pin, no transforms, instant state swap ---- */
+@media (prefers-reduced-motion: reduce) {
+  .hero { --hero-travel: 0px !important; }
+  .hero__sweep, .hero__cue, .hero__plabels, .pop { display: none !important; }
+  .hero__still, .hero__line > span, .rise { animation: none; }
+  .hero__fade { opacity: 1; transform: none; }
+  .hero__cats a, .hero[data-light="on"] .hero__cats a { transform: none; transition: color var(--duration-fast) linear; }
+  .hero__bloom, .hero[data-light="on"] .hero__bloom { transform: translate3d(-50%, -50%, 0) scale(1); transition: opacity var(--duration-fast) linear; }
+  .toggle, .toggle__thumb { transition: none; }
+  .toggle[aria-checked="true"] .toggle__thumb { transform: translate3d(1.25rem, 0, 0); }
+  .hero__burn, .hero[data-light="on"] .hero__burn { transition: none; }
+  .hero__hint { animation: none; opacity: 1; }
+}

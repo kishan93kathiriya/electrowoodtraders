@@ -1,0 +1,3197 @@
+{
+  "business": {
+    "name": "Electro Enterprise",
+    "brand": "ELECTRO",
+    "tagline": "Premium Quality Electrical Accessories",
+    "founded": 1979,
+    "years_experience": 43,
+    "certifications": [
+      "ISO 9001:2015"
+    ],
+    "location": "Ahmedabad, Gujarat, India",
+    "website": "www.electrogroup.in",
+    "email": "electroenterprise88@gmail.com",
+    "founder": "V. N. Gajera",
+    "sub_brands": [
+      "VENOX",
+      "STAR",
+      "RIO",
+      "ECO",
+      "EURO",
+      "NOVA",
+      "FOTOLIA"
+    ],
+    "made_in_india": true
+  },
+  "notes": [
+    "This catalog is a trade/wholesale price-and-code sheet: it has zero marketing description copy for any product. Every family below needs original description text written for the website — there is nothing to de-duplicate because there's nothing there yet.",
+    "Individual product photos are NOT extracted in this file. The catalog only exists as full-page layouts; usable web photos should come from the original photography/design files, not cropped off the PDF pages.",
+    "SS2216 in the Whiteline Surface Box family appears to be a typo for WS2216 in the source catalog — verify with the business before publishing.",
+    "packing values are printed as-is from the catalog (format varies: 'inner/outer', a single box count, or a bag count depending on the product line)."
+  ],
+  "categories": [
+    {
+      "id": "modular-switches-plates",
+      "name": "Modular Switches & Plates"
+    },
+    {
+      "id": "concealed-surface-boxes",
+      "name": "Concealed & Surface Boxes"
+    },
+    {
+      "id": "wiring-accessories",
+      "name": "Wiring Accessories"
+    },
+    {
+      "id": "distribution-mcb-boxes",
+      "name": "Distribution & MCB Boxes"
+    },
+    {
+      "id": "power-extension",
+      "name": "Power Strips, Flex Boards & Regulators"
+    },
+    {
+      "id": "lighting-doorbell",
+      "name": "LED Foot Lights & Door Bells"
+    }
+  ],
+  "families": [
+    {
+      "id": "venox-new-gen-modular-holder",
+      "name": "New Generation Modular Holder",
+      "category": "modular-switches-plates",
+      "brand_series": "Venox",
+      "catalog_page": "02",
+      "description": "The Venox modular base system pairs a single ring or base plate with interchangeable holders — angle holders, batten holders, ceiling roses, and blank or hole dummy plates — so one plate footprint (3.5x3.5, 5x5, 6x6, or 7x7) adapts to whatever fitting a room needs, including LED panel and junction lights. Holders use heavy brass fittings for a secure, lasting connection, finished for a clean, elegant look at an affordable price point. A practical base range for electricians who want to standardise fittings across a job without stocking five different plate systems.",
+      "variants": [
+        {
+          "sku": "VN35",
+          "name": "3.5 X 3.5 Square Junction Box",
+          "packing": "40/720",
+          "mrp": 39.0
+        },
+        {
+          "sku": "VN55",
+          "name": "5 X 5 Square Modular Ring Plate",
+          "packing": "25/800",
+          "mrp": 47.0
+        },
+        {
+          "sku": "VN50",
+          "name": "5 X 5 Round Modular Ring Plate",
+          "packing": "25/800",
+          "mrp": 47.0
+        },
+        {
+          "sku": "VN60",
+          "name": "6 X 6 Round Modular Base Plate",
+          "packing": "25/450",
+          "mrp": 54.0
+        },
+        {
+          "sku": "VN70",
+          "name": "7 X 7 Round Modular Base Plate",
+          "packing": "25/450",
+          "mrp": 58.0
+        },
+        {
+          "sku": "VN01",
+          "name": "Ring Angle Holder",
+          "packing": "25/800",
+          "mrp": 30.0
+        },
+        {
+          "sku": "VN02",
+          "name": "Ring Batten Holder",
+          "packing": "25/800",
+          "mrp": 30.0
+        },
+        {
+          "sku": "VN03",
+          "name": "Ring Ceiling Rose",
+          "packing": "25/800",
+          "mrp": 30.0
+        },
+        {
+          "sku": "VN04",
+          "name": "Ring Blank Plate",
+          "packing": "100/3200",
+          "mrp": 7.0
+        },
+        {
+          "sku": "VN05",
+          "name": "Ring Hole Plate",
+          "packing": "100/3200",
+          "mrp": 7.0
+        }
+      ]
+    },
+    {
+      "id": "venox-5x5-holder-plate-white",
+      "name": "5x5 Square & Round Modular Holder Set",
+      "category": "modular-switches-plates",
+      "brand_series": "Venox",
+      "finish": "White",
+      "catalog_page": "03",
+      "description": "A complete 5x5 modular holder set in both square and round profiles — angle holder, batten holder, ceiling rose, plain plate, and hole plate — finished in clean white to suit any interior. Square and round pieces share the same base footprint, so they can be mixed on the same wall run. Built for standard residential and light-commercial ceiling and wall fittings.",
+      "variants": [
+        {
+          "sku": "VN5501",
+          "name": "5 X 5 Square Modular Angle Holder",
+          "packing": "10/320",
+          "mrp": 75.0
+        },
+        {
+          "sku": "VN5502",
+          "name": "5 X 5 Square Modular Batten Holder",
+          "packing": "10/320",
+          "mrp": 75.0
+        },
+        {
+          "sku": "VN5503",
+          "name": "5 X 5 Square Modular Ceiling Rose",
+          "packing": "15/480",
+          "mrp": 75.0
+        },
+        {
+          "sku": "VN5504",
+          "name": "5 X 5 Square Modular Plain Plate",
+          "packing": "25/600",
+          "mrp": 53.0
+        },
+        {
+          "sku": "VN5505",
+          "name": "5 X 5 Square Modular Hole Plate",
+          "packing": "25/600",
+          "mrp": 53.0
+        },
+        {
+          "sku": "VN5001",
+          "name": "5 X 5 Round Modular Angle Holder",
+          "packing": "10/320",
+          "mrp": 75.0
+        },
+        {
+          "sku": "VN5002",
+          "name": "5 X 5 Round Modular Batten Holder",
+          "packing": "10/320",
+          "mrp": 75.0
+        },
+        {
+          "sku": "VN5003",
+          "name": "5 X 5 Round Modular Ceiling Rose",
+          "packing": "15/480",
+          "mrp": 75.0
+        },
+        {
+          "sku": "VN5004",
+          "name": "5 X 5 Round Modular Plain Plate",
+          "packing": "25/600",
+          "mrp": 53.0
+        },
+        {
+          "sku": "VN5005",
+          "name": "5 X 5 Round Modular Hole Plate",
+          "packing": "25/600",
+          "mrp": 53.0
+        }
+      ]
+    },
+    {
+      "id": "venox-6x6-7x7-holder-plate-white",
+      "name": "6x6 & 7x7 Round Modular Holder Set",
+      "category": "modular-switches-plates",
+      "brand_series": "Venox",
+      "finish": "White",
+      "catalog_page": "04",
+      "description": "The larger-format companion to the 5x5 range — 6x6 and 7x7 round modular holders, batten holders, ceiling roses, and plain or hole plates in white — for fittings that need a bigger base, such as heavier batten lights or ceiling fans. Same modular logic, scaled up for larger fixtures.",
+      "variants": [
+        {
+          "sku": "VN6001",
+          "name": "6 X 6 Round Modular Angle Holder",
+          "packing": "10/180",
+          "mrp": 82.0
+        },
+        {
+          "sku": "VN6002",
+          "name": "6 X 6 Round Modular Batten Holder",
+          "packing": "10/180",
+          "mrp": 82.0
+        },
+        {
+          "sku": "VN6003",
+          "name": "6 X 6 Round Modular Ceiling Rose",
+          "packing": "15/270",
+          "mrp": 82.0
+        },
+        {
+          "sku": "VN6004",
+          "name": "6 X 6 Round Modular Plain Plate",
+          "packing": "25/450",
+          "mrp": 60.0
+        },
+        {
+          "sku": "VN6005",
+          "name": "6 X 6 Round Modular Hole Plate",
+          "packing": "25/450",
+          "mrp": 60.0
+        },
+        {
+          "sku": "VN7001",
+          "name": "7 X 7 Round Modular Angle Holder",
+          "packing": "10/180",
+          "mrp": 92.0
+        },
+        {
+          "sku": "VN7002",
+          "name": "7 X 7 Round Modular Batten Holder",
+          "packing": "10/180",
+          "mrp": 92.0
+        },
+        {
+          "sku": "VN7003",
+          "name": "7 X 7 Round Modular Ceiling Rose",
+          "packing": "15/270",
+          "mrp": 92.0
+        },
+        {
+          "sku": "VN7004",
+          "name": "7 X 7 Round Modular Plain Plate",
+          "packing": "25/450",
+          "mrp": 63.0
+        },
+        {
+          "sku": "VN7005",
+          "name": "7 X 7 Round Modular Hole Plate",
+          "packing": "25/450",
+          "mrp": 63.0
+        }
+      ]
+    },
+    {
+      "id": "venox-holder-plate-black",
+      "name": "5x5 & 7x7 Modular Holder Set",
+      "category": "modular-switches-plates",
+      "brand_series": "Venox",
+      "finish": "Black",
+      "catalog_page": "05",
+      "description": "The 5x5 square and 7x7 round modular holder set in a matte black finish, covering angle holders, batten holders, ceiling roses, and plain or hole plates. Same fit and function as the white range, for interiors that call for a darker, more contemporary hardware finish.",
+      "variants": [
+        {
+          "sku": "VNBK5501",
+          "name": "5 X 5 Square Modular Angle Holder",
+          "packing": "10/320",
+          "mrp": 75.0
+        },
+        {
+          "sku": "VNBK5502",
+          "name": "5 X 5 Square Modular Batten Holder",
+          "packing": "10/320",
+          "mrp": 75.0
+        },
+        {
+          "sku": "VNBK5503",
+          "name": "5 X 5 Square Modular Ceiling Rose",
+          "packing": "15/480",
+          "mrp": 75.0
+        },
+        {
+          "sku": "VNBK5504",
+          "name": "5 X 5 Square Modular Plain Plate",
+          "packing": "25/600",
+          "mrp": 53.0
+        },
+        {
+          "sku": "VNBK5505",
+          "name": "5 X 5 Square Modular Hole Plate",
+          "packing": "25/600",
+          "mrp": 53.0
+        },
+        {
+          "sku": "VNBK7001",
+          "name": "7 X 7 Round Modular Angle Holder",
+          "packing": "10/180",
+          "mrp": 92.0
+        },
+        {
+          "sku": "VNBK7002",
+          "name": "7 X 7 Round Modular Batten Holder",
+          "packing": "10/180",
+          "mrp": 92.0
+        },
+        {
+          "sku": "VNBK7003",
+          "name": "7 X 7 Round Modular Ceiling Rose",
+          "packing": "15/270",
+          "mrp": 92.0
+        },
+        {
+          "sku": "VNBK7004",
+          "name": "7 X 7 Round Modular Plain Plate",
+          "packing": "25/450",
+          "mrp": 63.0
+        },
+        {
+          "sku": "VNBK7005",
+          "name": "7 X 7 Round Modular Hole Plate",
+          "packing": "25/450",
+          "mrp": 63.0
+        }
+      ]
+    },
+    {
+      "id": "venox-holder-plate-grey",
+      "name": "5x5 & 7x7 Modular Holder Set",
+      "category": "modular-switches-plates",
+      "brand_series": "Venox",
+      "finish": "Grey",
+      "catalog_page": "06",
+      "description": "The 5x5 square and 7x7 round modular holder set in grey, a neutral middle finish between the white and black ranges, covering angle holders, batten holders, ceiling roses, and plain or hole plates. Same modular base sizes as the rest of the Venox range, so grey pieces install alongside white or black on the same job.",
+      "variants": [
+        {
+          "sku": "VNGR5501",
+          "name": "5 X 5 Square Modular Angle Holder",
+          "packing": "10/320",
+          "mrp": 110.0
+        },
+        {
+          "sku": "VNGR5502",
+          "name": "5 X 5 Square Modular Batten Holder",
+          "packing": "10/320",
+          "mrp": 110.0
+        },
+        {
+          "sku": "VNGR5503",
+          "name": "5 X 5 Square Modular Ceiling Rose",
+          "packing": "15/480",
+          "mrp": 110.0
+        },
+        {
+          "sku": "VNGR5504",
+          "name": "5 X 5 Square Modular Plain Plate",
+          "packing": "25/600",
+          "mrp": 100.0
+        },
+        {
+          "sku": "VNGR5505",
+          "name": "5 X 5 Square Modular Hole Plate",
+          "packing": "25/600",
+          "mrp": 100.0
+        },
+        {
+          "sku": "VNGR7001",
+          "name": "7 X 7 Round Modular Angle Holder",
+          "packing": "10/180",
+          "mrp": 140.0
+        },
+        {
+          "sku": "VNGR7002",
+          "name": "7 X 7 Round Modular Batten Holder",
+          "packing": "10/180",
+          "mrp": 140.0
+        },
+        {
+          "sku": "VNGR7003",
+          "name": "7 X 7 Round Modular Ceiling Rose",
+          "packing": "15/270",
+          "mrp": 140.0
+        },
+        {
+          "sku": "VNGR7004",
+          "name": "7 X 7 Round Modular Plain Plate",
+          "packing": "25/450",
+          "mrp": 120.0
+        },
+        {
+          "sku": "VNGR7005",
+          "name": "7 X 7 Round Modular Hole Plate",
+          "packing": "25/450",
+          "mrp": 120.0
+        }
+      ]
+    },
+    {
+      "id": "venox-surface-oval-holder",
+      "name": "Surface & Oval Holder Range",
+      "category": "modular-switches-plates",
+      "brand_series": "Venox",
+      "catalog_page": "07",
+      "description": "A surface-mount range for jobs where a concealed back box isn't practical: 3.5x3.5 surface angle holders, batten holders, and ceiling roses, plus an oval 5x5 angle and batten holder available in white, black, and grey. Surface-mount construction means these fit directly onto a wall or ceiling face without cutting in a box.",
+      "variants": [
+        {
+          "sku": "VN3501",
+          "name": "3.5 X 3.5 Surface Angle Holder",
+          "packing": "25/450",
+          "mrp": 69.0
+        },
+        {
+          "sku": "VN3502",
+          "name": "3.5 X 3.5 Surface Batten Holder",
+          "packing": "25/450",
+          "mrp": 69.0
+        },
+        {
+          "sku": "VN3503",
+          "name": "3.5 X 3.5 Surface Ceiling Rose",
+          "packing": "40/720",
+          "mrp": 69.0
+        },
+        {
+          "sku": "VN3504",
+          "name": "3.5 X 3.5 Surface with Plain Dummy",
+          "packing": "40/720",
+          "mrp": 46.0
+        },
+        {
+          "sku": "VN3505",
+          "name": "3.5 X 3.5 Surface with Hole Dummy",
+          "packing": "40/720",
+          "mrp": 46.0
+        },
+        {
+          "sku": "VN4501",
+          "name": "Oval 5 X 5 Angle Holder",
+          "finish": "White",
+          "packing": "10/320",
+          "mrp": 75.0
+        },
+        {
+          "sku": "VN4502",
+          "name": "Oval 5 X 5 Batten Holder",
+          "finish": "White",
+          "packing": "10/320",
+          "mrp": 75.0
+        },
+        {
+          "sku": "VNBK4501",
+          "name": "Oval 5 X 5 Angle Holder",
+          "finish": "Black",
+          "packing": "10/320",
+          "mrp": 100.0
+        },
+        {
+          "sku": "VNBK4502",
+          "name": "Oval 5 X 5 Batten Holder",
+          "finish": "Black",
+          "packing": "10/320",
+          "mrp": 100.0
+        },
+        {
+          "sku": "VNGR4501",
+          "name": "Oval 5 X 5 Angle Holder",
+          "finish": "Grey",
+          "packing": "10/320",
+          "mrp": 100.0
+        },
+        {
+          "sku": "VNGR4502",
+          "name": "Oval 5 X 5 Batten Holder",
+          "finish": "Grey",
+          "packing": "10/320",
+          "mrp": 100.0
+        }
+      ]
+    },
+    {
+      "id": "rio-holder-series",
+      "name": "Rio Holder Series",
+      "category": "modular-switches-plates",
+      "brand_series": "Rio",
+      "catalog_page": "08",
+      "description": "The Rio range covers angle and batten holders in square, round, and 2-module modular formats, in white, black, and matt grey finishes, plus a matching ceiling rose. The broadest finish and format spread in the holder lineup, useful for matching holder style to whichever switch-plate series is already on the wall.",
+      "variants": [
+        {
+          "sku": "VN3101",
+          "name": "Rio Angle Holder",
+          "packing": "25/800",
+          "mrp": 37.0
+        },
+        {
+          "sku": "VN3102",
+          "name": "Rio Batten Holder",
+          "packing": "25/800",
+          "mrp": 37.0
+        },
+        {
+          "sku": "VNBK3101",
+          "name": "Rio Angle Holder",
+          "finish": "Black",
+          "packing": "25/800",
+          "mrp": 37.0
+        },
+        {
+          "sku": "VNBK3102",
+          "name": "Rio Batten Holder",
+          "finish": "Black",
+          "packing": "25/800",
+          "mrp": 37.0
+        },
+        {
+          "sku": "VNGR3101",
+          "name": "Rio Angle Holder",
+          "finish": "Matt Grey",
+          "packing": "25/800",
+          "mrp": 55.0
+        },
+        {
+          "sku": "VNGR3102",
+          "name": "Rio Batten Holder",
+          "finish": "Matt Grey",
+          "packing": "25/800",
+          "mrp": 55.0
+        },
+        {
+          "sku": "VN3103",
+          "name": "Rio Ceiling Rose",
+          "packing": "25/800",
+          "mrp": 36.0
+        },
+        {
+          "sku": "VN3104",
+          "name": "Rio Round Angle Holder",
+          "packing": "20/640",
+          "mrp": 40.0
+        },
+        {
+          "sku": "VN3105",
+          "name": "Rio Round Batten Holder",
+          "packing": "20/640",
+          "mrp": 40.0
+        },
+        {
+          "sku": "VN3106",
+          "name": "Rio Modular Angle Holder (2M)",
+          "packing": "25/800",
+          "mrp": 36.0
+        },
+        {
+          "sku": "VN3107",
+          "name": "Rio Modular Batten Holder (2M)",
+          "packing": "25/800",
+          "mrp": 36.0
+        },
+        {
+          "sku": "VNMB3106",
+          "name": "Rio Modular Angle Holder (2M)",
+          "finish": "Black",
+          "packing": "25/800",
+          "mrp": 46.0
+        },
+        {
+          "sku": "VNMB3107",
+          "name": "Rio Modular Batten Holder (2M)",
+          "finish": "Black",
+          "packing": "25/800",
+          "mrp": 46.0
+        },
+        {
+          "sku": "VNMG3106",
+          "name": "Rio Modular Angle Holder (2M)",
+          "finish": "Grey",
+          "packing": "25/800",
+          "mrp": 46.0
+        },
+        {
+          "sku": "VNMG3107",
+          "name": "Rio Modular Batten Holder (2M)",
+          "finish": "Grey",
+          "packing": "25/800",
+          "mrp": 46.0
+        }
+      ]
+    },
+    {
+      "id": "star-series-white",
+      "name": "Star Series Switch Plate",
+      "category": "modular-switches-plates",
+      "brand_series": "Star",
+      "finish": "White",
+      "catalog_page": "09",
+      "description": "The Star series is a complete modular switch-plate system in white: angle and batten holders, a ceiling rose, a fan plate, and plain or hole plates across 3.5x3.5, 5x5, and 7x7 formats, plus a companion Eco sub-line of simplified junction boxes and plain plates for cost-sensitive jobs. One series covering holders, plates, and boxes for a standard household wiring job.",
+      "variants": [
+        {
+          "sku": "VN4101",
+          "name": "Star 5 X 5 Angle Holder",
+          "packing": "10/320",
+          "mrp": 46.0
+        },
+        {
+          "sku": "VN4102",
+          "name": "Star 5 X 5 Batten Holder",
+          "packing": "10/320",
+          "mrp": 46.0
+        },
+        {
+          "sku": "VN4103",
+          "name": "Star 5 X 5 Ceiling Rose",
+          "packing": "25/600",
+          "mrp": 45.0
+        },
+        {
+          "sku": "VN4104",
+          "name": "Star 5 X 5 Plain Plate",
+          "packing": "25/600",
+          "mrp": 32.0
+        },
+        {
+          "sku": "VN4105",
+          "name": "Star 7 X 7 Round Fan Plate",
+          "packing": "25/450",
+          "mrp": 39.0
+        },
+        {
+          "sku": "VN4106",
+          "name": "Star 7 X 7 Round Batten Holder",
+          "packing": "10/180",
+          "mrp": 58.0
+        },
+        {
+          "sku": "VN4107",
+          "name": "Star 5 X 5 Round Hole Plate",
+          "packing": "30/720",
+          "mrp": 30.0
+        },
+        {
+          "sku": "VN4107P",
+          "name": "Star 5 X 5 Round Plain Plate",
+          "packing": "30/720",
+          "mrp": 30.0
+        },
+        {
+          "sku": "VN4108",
+          "name": "Star 3.5 X 3.5 Angle Holder",
+          "packing": "20/360",
+          "mrp": 42.0
+        },
+        {
+          "sku": "VN4109",
+          "name": "Star 3.5 X 3.5 Batten Holder",
+          "packing": "20/360",
+          "mrp": 42.0
+        },
+        {
+          "sku": "VN4110",
+          "name": "Eco 3.5 X 3.5 Square Junction Box",
+          "packing": "40/720",
+          "mrp": 20.0
+        },
+        {
+          "sku": "VN4111",
+          "name": "Eco 5 X 5 Square Modular Plain Plate",
+          "packing": "25/600",
+          "mrp": 28.0
+        },
+        {
+          "sku": "VN4112",
+          "name": "Eco 7 X 7 Round Modular Plain Plate",
+          "packing": "25/450",
+          "mrp": 33.0
+        },
+        {
+          "sku": "VN4113",
+          "name": "Eco 5 X 5 Round Plate",
+          "packing": "30/720",
+          "mrp": 28.0
+        },
+        {
+          "sku": "VN4114",
+          "name": "Star Angle Holder",
+          "packing": "25/800",
+          "mrp": 26.0
+        },
+        {
+          "sku": "VN4115",
+          "name": "Star Batten Holder",
+          "packing": "25/800",
+          "mrp": 26.0
+        }
+      ]
+    },
+    {
+      "id": "star-glossy-series",
+      "name": "Star Glossy Series",
+      "category": "modular-switches-plates",
+      "brand_series": "Star Glossy",
+      "finish": "Black Glossy",
+      "catalog_page": "10",
+      "description": "The Star range in a glossy black finish, covering the same angle holders, batten holders, ceiling rose, fan plate, and plain or hole plates as the white Star series. The high-gloss finish gives a more reflective, premium look for interiors where standard matte white or black doesn't fit.",
+      "variants": [
+        {
+          "sku": "VNBK4101",
+          "name": "Star 5 X 5 Angle Holder (Glossy)",
+          "packing": "10/320",
+          "mrp": 46.0
+        },
+        {
+          "sku": "VNBK4102",
+          "name": "Star 5 X 5 Batten Holder (Glossy)",
+          "packing": "10/320",
+          "mrp": 46.0
+        },
+        {
+          "sku": "VNBK4103",
+          "name": "Star 5 X 5 Ceiling Rose (Glossy)",
+          "packing": "25/600",
+          "mrp": 45.0
+        },
+        {
+          "sku": "VNBK4104",
+          "name": "Star 5 X 5 Plain Plate (Glossy)",
+          "packing": "25/600",
+          "mrp": 32.0
+        },
+        {
+          "sku": "VNBK4105",
+          "name": "Star 7 X 7 Round Fan Plate (Glossy)",
+          "packing": "25/450",
+          "mrp": 39.0
+        },
+        {
+          "sku": "VNBK4106",
+          "name": "Star 7 X 7 Round Batten Holder (Glossy)",
+          "packing": "10/180",
+          "mrp": 58.0
+        },
+        {
+          "sku": "VNBK4107",
+          "name": "Star 5 X 5 Round Hole Plate (Glossy)",
+          "packing": "30/720",
+          "mrp": 30.0
+        },
+        {
+          "sku": "VNBK4107P",
+          "name": "Star 5 X 5 Round Plain Plate (Glossy)",
+          "packing": "30/720",
+          "mrp": 30.0
+        },
+        {
+          "sku": "VNBK4111",
+          "name": "Star 5 X 5 Square Plain Plate (Glossy)",
+          "packing": "30/720",
+          "mrp": 28.0
+        }
+      ]
+    },
+    {
+      "id": "star-matt-series",
+      "name": "Star Matt Series",
+      "category": "modular-switches-plates",
+      "brand_series": "Star Matt",
+      "catalog_page": "11",
+      "description": "The Star range in matt grey and matt black, covering angle holders, batten holders, ceiling roses, fan plates, and plain plates in both 5x5 and 7x7 formats. Matt finishes sit above the standard Star line on price and suit interiors going for an understated, non-reflective hardware look.",
+      "variants": [
+        {
+          "sku": "VNMG4101",
+          "name": "Star 5 X 5 Angle Holder",
+          "finish": "Matt Grey",
+          "packing": "10/320",
+          "mrp": 85.0
+        },
+        {
+          "sku": "VNMG4102",
+          "name": "Star 5 X 5 Batten Holder",
+          "finish": "Matt Grey",
+          "packing": "10/320",
+          "mrp": 85.0
+        },
+        {
+          "sku": "VNMG4103",
+          "name": "Star 5 X 5 Ceiling Rose",
+          "finish": "Matt Grey",
+          "packing": "25/600",
+          "mrp": 85.0
+        },
+        {
+          "sku": "VNMG4104",
+          "name": "Star 5 X 5 Plain Plate",
+          "finish": "Matt Grey",
+          "packing": "25/600",
+          "mrp": 70.0
+        },
+        {
+          "sku": "VNMG4105",
+          "name": "Star 7 X 7 Round Fan Plate",
+          "finish": "Matt Grey",
+          "packing": "25/450",
+          "mrp": 90.0
+        },
+        {
+          "sku": "VNMG4106",
+          "name": "Star 7 X 7 Round Batten Holder",
+          "finish": "Matt Grey",
+          "packing": "10/180",
+          "mrp": 110.0
+        },
+        {
+          "sku": "VNMG4111",
+          "name": "Star 5 X 5 Plain Plate",
+          "finish": "Matt Grey",
+          "packing": "30/720",
+          "mrp": 77.0
+        },
+        {
+          "sku": "VNMB4101",
+          "name": "Star 5 X 5 Angle Holder",
+          "finish": "Matt Black",
+          "packing": "10/320",
+          "mrp": 85.0
+        },
+        {
+          "sku": "VNMB4102",
+          "name": "Star 5 X 5 Batten Holder",
+          "finish": "Matt Black",
+          "packing": "10/320",
+          "mrp": 85.0
+        },
+        {
+          "sku": "VNMB4103",
+          "name": "Star 5 X 5 Ceiling Rose",
+          "finish": "Matt Black",
+          "packing": "25/600",
+          "mrp": 85.0
+        },
+        {
+          "sku": "VNMB4104",
+          "name": "Star 5 X 5 Plain Plate",
+          "finish": "Matt Black",
+          "packing": "25/600",
+          "mrp": 70.0
+        },
+        {
+          "sku": "VNMB4105",
+          "name": "Star 7 X 7 Round Fan Plate",
+          "finish": "Matt Black",
+          "packing": "25/450",
+          "mrp": 90.0
+        },
+        {
+          "sku": "VNMB4106",
+          "name": "Star 7 X 7 Round Batten Holder",
+          "finish": "Matt Black",
+          "packing": "10/180",
+          "mrp": 110.0
+        },
+        {
+          "sku": "VNMB4111",
+          "name": "Star 5 X 5 Plain Plate",
+          "finish": "Matt Black",
+          "packing": "30/720",
+          "mrp": 77.0
+        }
+      ]
+    },
+    {
+      "id": "modular-concealed-box-grey",
+      "name": "Modular Concealed Box",
+      "category": "concealed-surface-boxes",
+      "brand_series": "Venox",
+      "finish": "Grey",
+      "catalog_page": "13",
+      "description": "PVC concealed (in-wall) boxes in grey, from a half-module box up to an 18-module box, plus dedicated fan boxes and a compact 3.5x3.5 box. These mount inside the wall before plastering, giving switches and sockets a secure, standard mounting point behind the visible plate. The grey finish matches the Venox grey holder and plate ranges for a consistent colour scheme even where the box itself won't usually be seen.",
+      "variants": [
+        {
+          "sku": "VNGR1101",
+          "name": "1/2 Module Conceal Box",
+          "packing": "30/100",
+          "mrp": 43.0
+        },
+        {
+          "sku": "VNGR1103",
+          "name": "3 Module Conceal Box",
+          "packing": "20/100",
+          "mrp": 55.0
+        },
+        {
+          "sku": "VNGR1104",
+          "name": "4 Module Conceal Box",
+          "packing": "20/50",
+          "mrp": 64.0
+        },
+        {
+          "sku": "VNGR1106",
+          "name": "6 Module Conceal Box",
+          "packing": "10/50",
+          "mrp": 85.0
+        },
+        {
+          "sku": "VNGR1108Hz",
+          "name": "8 Hz Module Conceal Box",
+          "packing": "10/50",
+          "mrp": 100.0
+        },
+        {
+          "sku": "VNGR1108Sq",
+          "name": "8 Sq Module Conceal Box",
+          "packing": "10/50",
+          "mrp": 110.0
+        },
+        {
+          "sku": "VNGR1112",
+          "name": "12 Module Conceal Box",
+          "packing": "10/50",
+          "mrp": 115.0
+        },
+        {
+          "sku": "VNGR1116",
+          "name": "16 Module Conceal Box",
+          "packing": "10/50",
+          "mrp": 135.0
+        },
+        {
+          "sku": "VNGR1118",
+          "name": "18 Module Conceal Box",
+          "packing": "5/20",
+          "mrp": 175.0
+        },
+        {
+          "sku": "VNGR1119",
+          "name": "3.5 X 3.5 Module Conceal Box",
+          "packing": "100",
+          "mrp": 16.0
+        },
+        {
+          "sku": "VNGR1120",
+          "name": "Fan Box",
+          "packing": "100",
+          "mrp": 60.0
+        }
+      ]
+    },
+    {
+      "id": "modular-concealed-box-orange",
+      "name": "Modular Concealed Box",
+      "category": "concealed-surface-boxes",
+      "brand_series": "Venox",
+      "finish": "Orange",
+      "catalog_page": "14",
+      "description": "The same half-module-to-18-module concealed box range in the bright orange finish widely used across the Indian electrical trade to make concealed boxes easy to spot on site during rough-in and inspection.",
+      "variants": [
+        {
+          "sku": "VNOR1101",
+          "name": "1/2 Module Conceal Box",
+          "packing": "30/100",
+          "mrp": 40.0
+        },
+        {
+          "sku": "VNOR1103",
+          "name": "3 Module Conceal Box",
+          "packing": "20/100",
+          "mrp": 50.0
+        },
+        {
+          "sku": "VNOR1104",
+          "name": "4 Module Conceal Box",
+          "packing": "20/50",
+          "mrp": 58.0
+        },
+        {
+          "sku": "VNOR1106",
+          "name": "6 Module Conceal Box",
+          "packing": "10/50",
+          "mrp": 78.0
+        },
+        {
+          "sku": "VNOR1108Hz",
+          "name": "8 Hz Module Conceal Box",
+          "packing": "10/50",
+          "mrp": 90.0
+        },
+        {
+          "sku": "VNOR1108Sq",
+          "name": "8 Sq Module Conceal Box",
+          "packing": "10/50",
+          "mrp": 100.0
+        },
+        {
+          "sku": "VNOR1112",
+          "name": "12 Module Conceal Box",
+          "packing": "10/50",
+          "mrp": 105.0
+        },
+        {
+          "sku": "VNOR1116",
+          "name": "16 Module Conceal Box",
+          "packing": "10/50",
+          "mrp": 120.0
+        },
+        {
+          "sku": "VNOR1118",
+          "name": "18 Module Conceal Box",
+          "packing": "5/20",
+          "mrp": 160.0
+        }
+      ]
+    },
+    {
+      "id": "modular-concealed-box-black",
+      "name": "Modular Concealed Box",
+      "category": "concealed-surface-boxes",
+      "brand_series": "Venox",
+      "finish": "Black",
+      "catalog_page": "15",
+      "description": "The concealed box range in black, from half-module through 18-module, plus fan boxes, a 3.5x3.5 box, and a 4x4 box — the widest size spread of the three concealed-box colour options. Matches the black Venox and Star finishes for installations that carry black through from the visible plate to the box behind it.",
+      "variants": [
+        {
+          "sku": "VNBK1101",
+          "name": "1/2 Module Conceal Box",
+          "packing": "30/100",
+          "mrp": 21.0
+        },
+        {
+          "sku": "VNBK1103",
+          "name": "3 Module Conceal Box",
+          "packing": "20/100",
+          "mrp": 35.0
+        },
+        {
+          "sku": "VNBK1104",
+          "name": "4 Module Conceal Box",
+          "packing": "20/50",
+          "mrp": 40.0
+        },
+        {
+          "sku": "VNBK1106",
+          "name": "6 Module Conceal Box",
+          "packing": "10/50",
+          "mrp": 55.0
+        },
+        {
+          "sku": "VNBK1108Hz",
+          "name": "8 Hz Module Conceal Box",
+          "packing": "10/50",
+          "mrp": 58.0
+        },
+        {
+          "sku": "VNBK1108Sq",
+          "name": "8 Sq Module Conceal Box",
+          "packing": "10/50",
+          "mrp": 66.0
+        },
+        {
+          "sku": "VNBK1112",
+          "name": "12 Module Conceal Box",
+          "packing": "10/50",
+          "mrp": 75.0
+        },
+        {
+          "sku": "VNBK1116",
+          "name": "16 Module Conceal Box",
+          "packing": "10/50",
+          "mrp": 88.0
+        },
+        {
+          "sku": "VNBK1118",
+          "name": "18 Module Conceal Box",
+          "packing": "5/20",
+          "mrp": 99.0
+        },
+        {
+          "sku": "VNBK1119",
+          "name": "3.5 X 3.5 Conceal Box",
+          "packing": "100",
+          "mrp": 12.0
+        },
+        {
+          "sku": "VNBK1120",
+          "name": "Fan Box",
+          "packing": "100",
+          "mrp": 47.0
+        },
+        {
+          "sku": "VNBK1121",
+          "name": "4 x 4 Conceal Box",
+          "packing": "100",
+          "mrp": 20.0
+        }
+      ]
+    },
+    {
+      "id": "metal-concealed-box-zinc-gi",
+      "name": "Metal Concealed Box (Zinc / GI)",
+      "category": "concealed-surface-boxes",
+      "brand_series": null,
+      "catalog_page": "16",
+      "description": "Metal concealed boxes in three gauges — Zink Plus Heavy (1mm, 20 gauge), GI Medium (0.8mm, 22 gauge), and GI Low (0.6mm, 24 gauge) — from 1-and-2-module up to 18-module sizes. Metal boxes are the standard choice where a job calls for a sturdier back box over PVC, with gauge chosen to suit wall type and local code.",
+      "variants": [
+        {
+          "sku": "ZH1601",
+          "name": "1 & 2 Module Box",
+          "material": "Zink Plus Heavy (1mm 20 gauge)",
+          "packing": "20",
+          "mrp": 72.0
+        },
+        {
+          "sku": "ZH1602",
+          "name": "3 Module Box",
+          "material": "Zink Plus Heavy (1mm 20 gauge)",
+          "packing": "20",
+          "mrp": 86.0
+        },
+        {
+          "sku": "ZH1604",
+          "name": "4 Module Box",
+          "material": "Zink Plus Heavy (1mm 20 gauge)",
+          "packing": "20",
+          "mrp": 100.0
+        },
+        {
+          "sku": "ZH1606",
+          "name": "6 Module Box",
+          "material": "Zink Plus Heavy (1mm 20 gauge)",
+          "packing": "10",
+          "mrp": 137.0
+        },
+        {
+          "sku": "ZH1608H",
+          "name": "8 Module Box (Hz)",
+          "material": "Zink Plus Heavy (1mm 20 gauge)",
+          "packing": "10",
+          "mrp": 152.0
+        },
+        {
+          "sku": "ZH1608S",
+          "name": "8 Module Box (Sq)",
+          "material": "Zink Plus Heavy (1mm 20 gauge)",
+          "packing": "10",
+          "mrp": 152.0
+        },
+        {
+          "sku": "ZH1612",
+          "name": "12 Module Box",
+          "material": "Zink Plus Heavy (1mm 20 gauge)",
+          "packing": "10",
+          "mrp": 200.0
+        },
+        {
+          "sku": "ZH1616",
+          "name": "16 Module Box",
+          "material": "Zink Plus Heavy (1mm 20 gauge)",
+          "packing": "5",
+          "mrp": 220.0
+        },
+        {
+          "sku": "ZH1618",
+          "name": "18 Module Box",
+          "material": "Zink Plus Heavy (1mm 20 gauge)",
+          "packing": "5",
+          "mrp": 240.0
+        },
+        {
+          "sku": "GM1601",
+          "name": "1 & 2 Module Box",
+          "material": "GI Medium (0.8mm 22 gauge)",
+          "packing": "20",
+          "mrp": 52.0
+        },
+        {
+          "sku": "GM1603",
+          "name": "3 Module Box",
+          "material": "GI Medium (0.8mm 22 gauge)",
+          "packing": "20",
+          "mrp": 63.0
+        },
+        {
+          "sku": "GM1604",
+          "name": "4 Module Box",
+          "material": "GI Medium (0.8mm 22 gauge)",
+          "packing": "20",
+          "mrp": 76.0
+        },
+        {
+          "sku": "GM1606",
+          "name": "6 Module Box",
+          "material": "GI Medium (0.8mm 22 gauge)",
+          "packing": "10",
+          "mrp": 108.0
+        },
+        {
+          "sku": "GM1608H",
+          "name": "8 Module Box (Hz)",
+          "material": "GI Medium (0.8mm 22 gauge)",
+          "packing": "10",
+          "mrp": 120.0
+        },
+        {
+          "sku": "GM1608S",
+          "name": "8 Module Box (Sq)",
+          "material": "GI Medium (0.8mm 22 gauge)",
+          "packing": "10",
+          "mrp": 126.0
+        },
+        {
+          "sku": "GM1612",
+          "name": "12 Module Box",
+          "material": "GI Medium (0.8mm 22 gauge)",
+          "packing": "10",
+          "mrp": 160.0
+        },
+        {
+          "sku": "GM1616",
+          "name": "16 Module Box",
+          "material": "GI Medium (0.8mm 22 gauge)",
+          "packing": "5",
+          "mrp": 190.0
+        },
+        {
+          "sku": "GM1618",
+          "name": "18 Module Box",
+          "material": "GI Medium (0.8mm 22 gauge)",
+          "packing": "5",
+          "mrp": 225.0
+        },
+        {
+          "sku": "GL1601",
+          "name": "1 & 2 Module Box",
+          "material": "GI Low (0.6mm 24 gauge)",
+          "packing": "20",
+          "mrp": 40.0
+        },
+        {
+          "sku": "GL1603",
+          "name": "3 Module Box",
+          "material": "GI Low (0.6mm 24 gauge)",
+          "packing": "20",
+          "mrp": 51.0
+        },
+        {
+          "sku": "GL1604",
+          "name": "4 Module Box",
+          "material": "GI Low (0.6mm 24 gauge)",
+          "packing": "20",
+          "mrp": 58.0
+        },
+        {
+          "sku": "GL1606",
+          "name": "6 Module Box",
+          "material": "GI Low (0.6mm 24 gauge)",
+          "packing": "10",
+          "mrp": 83.0
+        },
+        {
+          "sku": "GL1608H",
+          "name": "8 Module Box (Hz)",
+          "material": "GI Low (0.6mm 24 gauge)",
+          "packing": "10",
+          "mrp": 92.0
+        },
+        {
+          "sku": "GL1608S",
+          "name": "8 Module Box (Sq)",
+          "material": "GI Low (0.6mm 24 gauge)",
+          "packing": "10",
+          "mrp": 98.0
+        },
+        {
+          "sku": "GL1612",
+          "name": "12 Module Box",
+          "material": "GI Low (0.6mm 24 gauge)",
+          "packing": "10",
+          "mrp": 135.0
+        },
+        {
+          "sku": "GL1616",
+          "name": "16 Module Box",
+          "material": "GI Low (0.6mm 24 gauge)",
+          "packing": "5",
+          "mrp": 160.0
+        },
+        {
+          "sku": "GL1618",
+          "name": "18 Module Box",
+          "material": "GI Low (0.6mm 24 gauge)",
+          "packing": "5",
+          "mrp": 180.0
+        }
+      ]
+    },
+    {
+      "id": "surface-gang-box-whiteline",
+      "name": "Modular Surface Gang Box",
+      "category": "concealed-surface-boxes",
+      "brand_series": "White Line",
+      "catalog_page": "17",
+      "description": "White surface-mount gang boxes from 2-module up to 18-module, for switch and socket installations that mount directly onto the wall face rather than being recessed into it — common in retrofit work or exposed-conduit installations where cutting into the wall isn't an option.",
+      "variants": [
+        {
+          "sku": "OS2302",
+          "name": "2 Module White Line Surface Box",
+          "packing": "20/800",
+          "mrp": 63.0
+        },
+        {
+          "sku": "OS2303",
+          "name": "3 Module White Line Surface Box",
+          "packing": "10/560",
+          "mrp": 76.0
+        },
+        {
+          "sku": "OS2304",
+          "name": "4 Module White Line Surface Box",
+          "packing": "10/480",
+          "mrp": 88.0
+        },
+        {
+          "sku": "OS2306",
+          "name": "6 Module White Line Surface Box",
+          "packing": "10/320",
+          "mrp": 110.0
+        },
+        {
+          "sku": "OS2308S",
+          "name": "8Sq Module White Line Surface Box",
+          "packing": "10/300",
+          "mrp": 132.0
+        },
+        {
+          "sku": "OS2308H",
+          "name": "8Hz Module White Line Surface Box",
+          "packing": "10/300",
+          "mrp": 132.0
+        },
+        {
+          "sku": "OS2312",
+          "name": "12 Module White Line Surface Box",
+          "packing": "10/200",
+          "mrp": 162.0
+        },
+        {
+          "sku": "OS2316",
+          "name": "16 Module White Line Surface Box",
+          "packing": "5/150",
+          "mrp": 204.0
+        },
+        {
+          "sku": "OS2318",
+          "name": "18 Module White Line Surface Box",
+          "packing": "5/160",
+          "mrp": 222.0
+        }
+      ]
+    },
+    {
+      "id": "surface-box-silverline",
+      "name": "Silverline Modular Surface Box",
+      "category": "concealed-surface-boxes",
+      "brand_series": "Silverline",
+      "catalog_page": "18",
+      "description": "The surface-mount gang box range in a silver-line finish, from single-module up to 18-module, for installations where a metallic-look surface box suits the interior better than plain white.",
+      "variants": [
+        {
+          "sku": "SS2101",
+          "name": "1 Module Silver Line Surface Box",
+          "packing": "20/720",
+          "mrp": 50.0
+        },
+        {
+          "sku": "SS2102",
+          "name": "2 Module Silver Line Surface Box",
+          "packing": "20/600",
+          "mrp": 58.0
+        },
+        {
+          "sku": "SS2103",
+          "name": "3 Module Silver Line Surface Box",
+          "packing": "20/480",
+          "mrp": 73.0
+        },
+        {
+          "sku": "SS2104",
+          "name": "4 Module Silver Line Surface Box",
+          "packing": "20/360",
+          "mrp": 84.0
+        },
+        {
+          "sku": "SS2106",
+          "name": "6 Module Silver Line Surface Box",
+          "packing": "10/300",
+          "mrp": 110.0
+        },
+        {
+          "sku": "SS2108S",
+          "name": "8Sq Module Silver Line Surface Box",
+          "packing": "10/210",
+          "mrp": 127.0
+        },
+        {
+          "sku": "SS2108H",
+          "name": "8Hz Module Silver Line Surface Box",
+          "packing": "10/240",
+          "mrp": 127.0
+        },
+        {
+          "sku": "SS2112",
+          "name": "12 Module Silver Line Surface Box",
+          "packing": "10/180",
+          "mrp": 156.0
+        },
+        {
+          "sku": "SS2116",
+          "name": "16 Module Silver Line Surface Box",
+          "packing": "5/120",
+          "mrp": 215.0
+        },
+        {
+          "sku": "SS2118",
+          "name": "18 Module Silver Line Surface Box",
+          "packing": "5/120",
+          "mrp": 220.0
+        }
+      ]
+    },
+    {
+      "id": "surface-box-whiteline",
+      "name": "Whiteline Modular Surface Box",
+      "category": "concealed-surface-boxes",
+      "brand_series": "Whiteline",
+      "catalog_page": "19",
+      "description": "A second white-finish surface-mount gang box range, single-module through 18-module, offered alongside the Silverline range as a standard-white alternative for the same surface-mount installations.",
+      "variants": [
+        {
+          "sku": "WS2201",
+          "name": "1 Module White Line Surface Box",
+          "packing": "20/720",
+          "mrp": 44.0
+        },
+        {
+          "sku": "WS2202",
+          "name": "2 Module White Line Surface Box",
+          "packing": "20/600",
+          "mrp": 55.0
+        },
+        {
+          "sku": "WS2203",
+          "name": "3 Module White Line Surface Box",
+          "packing": "20/480",
+          "mrp": 66.0
+        },
+        {
+          "sku": "WS2204",
+          "name": "4 Module White Line Surface Box",
+          "packing": "20/360",
+          "mrp": 80.0
+        },
+        {
+          "sku": "WS2206",
+          "name": "6 Module White Line Surface Box",
+          "packing": "10/300",
+          "mrp": 105.0
+        },
+        {
+          "sku": "WS2208S",
+          "name": "8Sq Module White Line Surface Box",
+          "packing": "10/210",
+          "mrp": 120.0
+        },
+        {
+          "sku": "WS2208H",
+          "name": "8Hz Module White Line Surface Box",
+          "packing": "10/240",
+          "mrp": 120.0
+        },
+        {
+          "sku": "WS2212",
+          "name": "12 Module White Line Surface Box",
+          "packing": "10/180",
+          "mrp": 150.0
+        },
+        {
+          "sku": "SS2216",
+          "name": "16 Module White Line Surface Box",
+          "packing": "5/120",
+          "mrp": 205.0,
+          "note": "Printed as SS2216 in catalog — likely intended WS2216, verify before publishing."
+        },
+        {
+          "sku": "WS2218",
+          "name": "18 Module White Line Surface Box",
+          "packing": "5/120",
+          "mrp": 210.0
+        }
+      ]
+    },
+    {
+      "id": "cable-ties",
+      "name": "Cable Tie",
+      "category": "wiring-accessories",
+      "brand_series": null,
+      "catalog_page": "20",
+      "description": "Nylon cable ties from 100mm up to 450mm across a range of widths, for bundling and securing wiring during installation. Sized by length and width so the tie can be matched to bundle size, from small control-wire runs up to heavier power cables.",
+      "variants": [
+        {
+          "sku": "CT1018",
+          "name": "Cable Tie 100MM X 1.8MM",
+          "packing": "920",
+          "mrp": 23.0
+        },
+        {
+          "sku": "CT1025",
+          "name": "Cable Tie 100MM X 2.5MM",
+          "packing": "720",
+          "mrp": 31.0
+        },
+        {
+          "sku": "CT1530",
+          "name": "Cable Tie 150MM X 3MM",
+          "packing": "400",
+          "mrp": 62.0
+        },
+        {
+          "sku": "CT1536",
+          "name": "Cable Tie 150MM X 3.6MM",
+          "packing": "350",
+          "mrp": 79.0
+        },
+        {
+          "sku": "CT2030",
+          "name": "Cable Tie 200MM X 3MM",
+          "packing": "300",
+          "mrp": 81.0
+        },
+        {
+          "sku": "CT2036",
+          "name": "Cable Tie 200MM X 3.6MM",
+          "packing": "250",
+          "mrp": 103.0
+        },
+        {
+          "sku": "CT2048",
+          "name": "Cable Tie 200MM X 4.8MM",
+          "packing": "185",
+          "mrp": 153.0
+        },
+        {
+          "sku": "CT2536",
+          "name": "Cable Tie 250MM X 3.6MM",
+          "packing": "250",
+          "mrp": 126.0
+        },
+        {
+          "sku": "CT2548",
+          "name": "Cable Tie 250MM X 4.8MM",
+          "packing": "160",
+          "mrp": 190.0
+        },
+        {
+          "sku": "CT3036",
+          "name": "Cable Tie 300MM X 3.6MM",
+          "packing": "200",
+          "mrp": 142.0
+        },
+        {
+          "sku": "CT3048",
+          "name": "Cable Tie 300MM X 4.8MM",
+          "packing": "140",
+          "mrp": 221.0
+        },
+        {
+          "sku": "CT3536",
+          "name": "Cable Tie 350MM X 3.6MM",
+          "packing": "150",
+          "mrp": 185.0
+        },
+        {
+          "sku": "CT3548",
+          "name": "Cable Tie 350MM X 4.8MM",
+          "packing": "120",
+          "mrp": 265.0
+        },
+        {
+          "sku": "CT4048",
+          "name": "Cable Tie 400MM X 4.8MM",
+          "packing": "110",
+          "mrp": 275.0
+        },
+        {
+          "sku": "CT4548",
+          "name": "Cable Tie 450MM X 4.8MM",
+          "packing": "90",
+          "mrp": 310.0
+        }
+      ]
+    },
+    {
+      "id": "wire-circle-cable-clip",
+      "name": "Wire Circle Cable Clip",
+      "category": "wiring-accessories",
+      "brand_series": null,
+      "catalog_page": "20",
+      "description": "Circular wire clips from 4mm to 25mm in white and black, plus double-nail clips and oval or flat clip formats, for fixing a single cable or wire bundle directly to a wall or ceiling surface. Clip diameter should match the cable gauge — smaller clips for lighting circuits, larger for heavier power runs.",
+      "variants": [
+        {
+          "sku": "E-300",
+          "name": "4 MM Wire Circle Cable Clip",
+          "finish": "White",
+          "packing": "100",
+          "mrp": 23.0
+        },
+        {
+          "sku": "E-301",
+          "name": "5 MM Wire Circle Cable Clip",
+          "finish": "White",
+          "packing": "100",
+          "mrp": 26.0
+        },
+        {
+          "sku": "E-302",
+          "name": "6 MM Wire Circle Cable Clip",
+          "finish": "White",
+          "packing": "100",
+          "mrp": 31.0
+        },
+        {
+          "sku": "E-303",
+          "name": "7 MM Wire Circle Cable Clip",
+          "finish": "White",
+          "packing": "100",
+          "mrp": 39.0
+        },
+        {
+          "sku": "E-304",
+          "name": "8 MM Wire Circle Cable Clip",
+          "finish": "White",
+          "packing": "100",
+          "mrp": 48.0
+        },
+        {
+          "sku": "E-305",
+          "name": "10 MM Wire Circle Cable Clip",
+          "finish": "White",
+          "packing": "100",
+          "mrp": 66.0
+        },
+        {
+          "sku": "E-306",
+          "name": "12 MM Wire Circle Cable Clip",
+          "finish": "White",
+          "packing": "100",
+          "mrp": 82.0
+        },
+        {
+          "sku": "E-307",
+          "name": "14 MM Wire Circle Cable Clip",
+          "finish": "White",
+          "packing": "100",
+          "mrp": 130.0
+        },
+        {
+          "sku": "E-308",
+          "name": "16 MM Wire Circle Cable Clip",
+          "finish": "White",
+          "packing": "100",
+          "mrp": 145.0
+        },
+        {
+          "sku": "E-309",
+          "name": "20 MM Wire Circle Cable Clip",
+          "finish": "White",
+          "packing": "100",
+          "mrp": 155.0
+        },
+        {
+          "sku": "E-310",
+          "name": "25 MM Wire Circle Cable Clip",
+          "finish": "White",
+          "packing": "100",
+          "mrp": 210.0
+        },
+        {
+          "sku": "EB-309",
+          "name": "20 MM Wire Circle Cable Clip",
+          "finish": "Black",
+          "packing": "100",
+          "mrp": 160.0
+        },
+        {
+          "sku": "EB-310",
+          "name": "25 MM Wire Circle Cable Clip",
+          "finish": "Black",
+          "packing": "100",
+          "mrp": 220.0
+        },
+        {
+          "sku": "E-311",
+          "name": "20 MM Double Nail Clip",
+          "packing": "50",
+          "mrp": 225.0
+        },
+        {
+          "sku": "E-312",
+          "name": "25 MM Double Nail Clip",
+          "packing": "50",
+          "mrp": 280.0
+        },
+        {
+          "sku": "E-313",
+          "name": "32 MM Double Nail Clip",
+          "packing": "50",
+          "mrp": 350.0
+        },
+        {
+          "sku": "E-314",
+          "name": "40 MM Double Nail Clip",
+          "packing": "25",
+          "mrp": 270.0
+        },
+        {
+          "sku": "E-315",
+          "name": "50 MM Double Nail Clip",
+          "packing": "20",
+          "mrp": 300.0
+        },
+        {
+          "sku": "E-316",
+          "name": "B/Oval Cable Clip",
+          "packing": "50",
+          "mrp": 26.0
+        },
+        {
+          "sku": "E-317",
+          "name": "B/Flat Cable Clip",
+          "packing": "100",
+          "mrp": 26.0
+        }
+      ]
+    },
+    {
+      "id": "modular-plate-silverline-blackline",
+      "name": "Silverline & Blackline Modular Plate",
+      "category": "modular-switches-plates",
+      "brand_series": null,
+      "catalog_page": "21",
+      "description": "Modular switch plates in silverline and blackline finishes, from single-module up to 18-module, including horizontal and vertical 8-module layouts. A metallic-finish plate option for jobs where standard white or black doesn't match the interior's hardware finish.",
+      "variants": [
+        {
+          "sku": "SP-2301",
+          "name": "1 Module Plate",
+          "finish": "Silverline",
+          "packing": "20",
+          "mrp": 52.0
+        },
+        {
+          "sku": "SP-2302",
+          "name": "2 Module Plate",
+          "finish": "Silverline",
+          "packing": "20",
+          "mrp": 52.0
+        },
+        {
+          "sku": "SP-2303",
+          "name": "3 Module Plate",
+          "finish": "Silverline",
+          "packing": "20",
+          "mrp": 54.0
+        },
+        {
+          "sku": "SP-2304",
+          "name": "4 Module Plate",
+          "finish": "Silverline",
+          "packing": "20",
+          "mrp": 63.0
+        },
+        {
+          "sku": "SP-2306",
+          "name": "6 Module Plate",
+          "finish": "Silverline",
+          "packing": "10",
+          "mrp": 90.0
+        },
+        {
+          "sku": "SP-2308H",
+          "name": "8 Module Plate (Hz)",
+          "finish": "Silverline",
+          "packing": "10",
+          "mrp": 102.0
+        },
+        {
+          "sku": "SP-2308V",
+          "name": "8 Module Plate (V)",
+          "finish": "Silverline",
+          "packing": "10",
+          "mrp": 102.0
+        },
+        {
+          "sku": "SP-2312",
+          "name": "12 Module Plate",
+          "finish": "Silverline",
+          "packing": "10",
+          "mrp": 138.0
+        },
+        {
+          "sku": "SP-2316",
+          "name": "16 Module Plate",
+          "finish": "Silverline",
+          "packing": "10",
+          "mrp": 180.0
+        },
+        {
+          "sku": "SP-2318",
+          "name": "18 Module Plate",
+          "finish": "Silverline",
+          "packing": "10",
+          "mrp": 180.0
+        },
+        {
+          "sku": "BP-2401",
+          "name": "1 Module Plate",
+          "finish": "Blackline",
+          "packing": "20",
+          "mrp": 43.0
+        },
+        {
+          "sku": "BP-2402",
+          "name": "2 Module Plate",
+          "finish": "Blackline",
+          "packing": "20",
+          "mrp": 43.0
+        },
+        {
+          "sku": "BP-2403",
+          "name": "3 Module Plate",
+          "finish": "Blackline",
+          "packing": "20",
+          "mrp": 45.0
+        },
+        {
+          "sku": "BP-2404",
+          "name": "4 Module Plate",
+          "finish": "Blackline",
+          "packing": "20",
+          "mrp": 54.0
+        },
+        {
+          "sku": "BP-2406",
+          "name": "6 Module Plate",
+          "finish": "Blackline",
+          "packing": "10",
+          "mrp": 80.0
+        },
+        {
+          "sku": "BP-2408H",
+          "name": "8 Module Plate (Hz)",
+          "finish": "Blackline",
+          "packing": "10",
+          "mrp": 88.0
+        },
+        {
+          "sku": "BP-2408V",
+          "name": "8 Module Plate (V)",
+          "finish": "Blackline",
+          "packing": "10",
+          "mrp": 88.0
+        },
+        {
+          "sku": "BP-2412",
+          "name": "12 Module Plate",
+          "finish": "Blackline",
+          "packing": "10",
+          "mrp": 120.0
+        },
+        {
+          "sku": "BP-2416",
+          "name": "16 Module Plate",
+          "finish": "Blackline",
+          "packing": "10",
+          "mrp": 155.0
+        },
+        {
+          "sku": "BP-2418",
+          "name": "18 Module Plate",
+          "finish": "Blackline",
+          "packing": "10",
+          "mrp": 155.0
+        }
+      ]
+    },
+    {
+      "id": "euro-accessories",
+      "name": "Euro Accessories",
+      "category": "wiring-accessories",
+      "brand_series": "Euro",
+      "catalog_page": "22",
+      "description": "A general electrical-accessories line covering plug tops (6A and 16A), pendant and multi-pendant holders in black and white, cable connectors, a USB socket module, blank dummy plates, amp converters, multi-sockets, connector strips, and PVC grips — the small parts every wiring job needs alongside the main switches and boxes.",
+      "variants": [
+        {
+          "sku": "E-201",
+          "name": "Tape Roll",
+          "packing": "30",
+          "mrp": 20.0
+        },
+        {
+          "sku": "E-202A",
+          "name": "Press Fit Cable Connector 2 Way",
+          "packing": "500",
+          "mrp": 3.0
+        },
+        {
+          "sku": "E-202B",
+          "name": "Press Fit Cable Connector 3 Way",
+          "packing": "250",
+          "mrp": 8.0
+        },
+        {
+          "sku": "E-202C",
+          "name": "Press Fit Cable Connector 4 Way",
+          "packing": "250",
+          "mrp": 10.0
+        },
+        {
+          "sku": "E-203",
+          "name": "6A 3-Pin Plug Top",
+          "packing": "10",
+          "mrp": 60.0
+        },
+        {
+          "sku": "E-204",
+          "name": "16A 3-Pin Plug Top",
+          "packing": "10",
+          "mrp": 100.0
+        },
+        {
+          "sku": "E-205",
+          "name": "2-Pin Top (2 Parts)",
+          "packing": "30",
+          "mrp": 22.0
+        },
+        {
+          "sku": "E-206",
+          "name": "Male Female (2 Parts)",
+          "packing": "30",
+          "mrp": 44.0
+        },
+        {
+          "sku": "E-207",
+          "name": "Trio-2 Pin Top (3 Parts)",
+          "packing": "20",
+          "mrp": 24.0
+        },
+        {
+          "sku": "E-208",
+          "name": "Trio-Male Female (3 Parts)",
+          "packing": "20",
+          "mrp": 48.0
+        },
+        {
+          "sku": "E-209",
+          "name": "Adaptor",
+          "packing": "30",
+          "mrp": 21.0
+        },
+        {
+          "sku": "E-210",
+          "name": "Pendant Holder",
+          "finish": "Black",
+          "packing": "30",
+          "mrp": 21.0
+        },
+        {
+          "sku": "E-211",
+          "name": "Multi Pendant Holder",
+          "finish": "Black",
+          "packing": "30",
+          "mrp": 25.0
+        },
+        {
+          "sku": "E-212",
+          "name": "Pendant Holder",
+          "finish": "White",
+          "packing": "30",
+          "mrp": 29.0
+        },
+        {
+          "sku": "E-213",
+          "name": "Pendant Holder (With Cap)",
+          "finish": "White",
+          "packing": "30",
+          "mrp": 30.0
+        },
+        {
+          "sku": "E-214",
+          "name": "Multi Pendant Holder",
+          "finish": "White",
+          "packing": "30",
+          "mrp": 36.0
+        },
+        {
+          "sku": "E-215",
+          "name": "1 M USB Socket",
+          "packing": "20",
+          "mrp": 280.0
+        },
+        {
+          "sku": "E-216",
+          "name": "1 M Blank Plate (Dummy)",
+          "packing": "100",
+          "mrp": 3.75
+        },
+        {
+          "sku": "E-216A",
+          "name": "1 M (Dummy)",
+          "finish": "Black Matt",
+          "packing": "100",
+          "mrp": 10.0
+        },
+        {
+          "sku": "E-217",
+          "name": "6A to 16A Converter",
+          "packing": "25",
+          "mrp": 60.0
+        },
+        {
+          "sku": "E-218",
+          "name": "3 Pin Multi Socket",
+          "packing": "25",
+          "mrp": 70.0
+        },
+        {
+          "sku": "E-219",
+          "name": "10Amp Connector Strip",
+          "packing": "25",
+          "mrp": 48.0
+        },
+        {
+          "sku": "E-220",
+          "name": "16Amp Connector Strip",
+          "packing": "25",
+          "mrp": 90.0
+        },
+        {
+          "sku": "E-221",
+          "name": "16A SSC",
+          "packing": "10",
+          "mrp": 190.0
+        },
+        {
+          "sku": "E-222",
+          "name": "16A SSC with Box",
+          "packing": "10",
+          "mrp": 210.0
+        },
+        {
+          "sku": "E-223",
+          "name": "Double SS Combine",
+          "packing": "5",
+          "mrp": 380.0
+        },
+        {
+          "sku": "E-224",
+          "name": "Double SS Combine with Box",
+          "packing": "5",
+          "mrp": 420.0
+        },
+        {
+          "sku": "E-231",
+          "name": "2 Pin Parallel",
+          "packing": "30",
+          "mrp": 35.0
+        },
+        {
+          "sku": "E-232",
+          "name": "B.C. Parallel",
+          "packing": "30",
+          "mrp": 33.0
+        },
+        {
+          "sku": "E-233",
+          "name": "25*8 PVC Grip",
+          "packing": "50",
+          "mrp": 22.0
+        },
+        {
+          "sku": "E-234",
+          "name": "35*8 PVC Grip",
+          "packing": "50",
+          "mrp": 32.0
+        }
+      ]
+    },
+    {
+      "id": "arc-distribution-box",
+      "name": "Arc Distribution Box",
+      "category": "distribution-mcb-boxes",
+      "brand_series": "Arc",
+      "catalog_page": "23",
+      "description": "Single and double-door MCB distribution boxes from 2-pole up to 16-way SPN, covering everything from a small ECO 2-pole box for a single circuit up to a full 16-way double-door board for a household's complete distribution panel. Way count should match the number of circuits — lighting, power, appliances — the installation needs to isolate independently.",
+      "variants": [
+        {
+          "sku": "E-598",
+          "name": "1 Way MCB Dummy",
+          "packing": "100",
+          "mrp": 4.0
+        },
+        {
+          "sku": "E-599",
+          "name": "2 Pole MCB Box ECO",
+          "packing": "1",
+          "mrp": 135.0
+        },
+        {
+          "sku": "E-600",
+          "name": "4 Pole MCB Box ECO",
+          "packing": "1",
+          "mrp": 180.0
+        },
+        {
+          "sku": "E-601",
+          "name": "2 Pole MCB Box",
+          "packing": "1",
+          "mrp": 190.0
+        },
+        {
+          "sku": "E-602",
+          "name": "4 Pole MCB Box",
+          "packing": "1",
+          "mrp": 220.0
+        },
+        {
+          "sku": "E-602H",
+          "name": "4 Pole MCB Box (10 Inch)",
+          "packing": "1",
+          "mrp": 370.0
+        },
+        {
+          "sku": "E-603",
+          "name": "4 Way SPN Single Door",
+          "packing": "1",
+          "mrp": 325.0
+        },
+        {
+          "sku": "E-604",
+          "name": "6 Way SPN Single Door",
+          "packing": "1",
+          "mrp": 400.0
+        },
+        {
+          "sku": "E-605",
+          "name": "8 Way SPN Single Door",
+          "packing": "1",
+          "mrp": 465.0
+        },
+        {
+          "sku": "E-606",
+          "name": "10 Way SPN Single Door",
+          "packing": "1",
+          "mrp": 525.0
+        },
+        {
+          "sku": "E-607",
+          "name": "12 Way SPN Single Door",
+          "packing": "1",
+          "mrp": 600.0
+        },
+        {
+          "sku": "E-608",
+          "name": "16 Way SPN Single Door",
+          "packing": "1",
+          "mrp": 725.0
+        },
+        {
+          "sku": "E-611",
+          "name": "4 Way SPN Double Door",
+          "packing": "1",
+          "mrp": 660.0
+        },
+        {
+          "sku": "E-612",
+          "name": "6 Way SPN Double Door",
+          "packing": "1",
+          "mrp": 790.0
+        },
+        {
+          "sku": "E-613",
+          "name": "8 Way SPN Double Door",
+          "packing": "1",
+          "mrp": 900.0
+        },
+        {
+          "sku": "E-614",
+          "name": "10 Way SPN Double Door",
+          "packing": "1",
+          "mrp": 1000.0
+        },
+        {
+          "sku": "E-615",
+          "name": "12 Way SPN Double Door",
+          "packing": "1",
+          "mrp": 1100.0
+        },
+        {
+          "sku": "E-616",
+          "name": "16 Way SPN Double Door",
+          "packing": "1",
+          "mrp": 1400.0
+        }
+      ]
+    },
+    {
+      "id": "pvc-mcb-box",
+      "name": "PVC MCB Box",
+      "category": "distribution-mcb-boxes",
+      "brand_series": null,
+      "catalog_page": "23",
+      "description": "PVC MCB boxes with a glass-front door, from a 2/4-way box up to a 10/14-way box, plus smaller open-frame 1&2 and 3&4-way boxes in heavy and medium builds. A lighter-duty, lower-cost alternative to the metal Arc distribution boxes for smaller circuit counts.",
+      "variants": [
+        {
+          "sku": "E-621",
+          "name": "2/4 PVC Glass MCB Box",
+          "packing": "1",
+          "mrp": 400.0
+        },
+        {
+          "sku": "E-622",
+          "name": "6/8 PVC Glass MCB Box",
+          "packing": "1",
+          "mrp": 500.0
+        },
+        {
+          "sku": "E-623",
+          "name": "10/12 PVC Glass MCB Box",
+          "packing": "1",
+          "mrp": 640.0
+        },
+        {
+          "sku": "E-623A",
+          "name": "10/14 PVC Glass MCB Box",
+          "packing": "1",
+          "mrp": 730.0
+        },
+        {
+          "sku": "E-624",
+          "name": "1&2 PVC Glass MCB Box",
+          "packing": "10",
+          "mrp": 76.0
+        },
+        {
+          "sku": "E-625",
+          "name": "3&4 PVC Glass MCB Box",
+          "packing": "6",
+          "mrp": 98.0
+        },
+        {
+          "sku": "E-626",
+          "name": "1&2 PVC MCB Box (H)",
+          "packing": "10",
+          "mrp": 50.0
+        },
+        {
+          "sku": "E-627",
+          "name": "3&4 PVC MCB Box (H)",
+          "packing": "5",
+          "mrp": 73.0
+        },
+        {
+          "sku": "E-628",
+          "name": "1&2 PVC MCB Box (M)",
+          "packing": "10",
+          "mrp": 35.0
+        },
+        {
+          "sku": "E-629",
+          "name": "3&4 PVC MCB Box (M)",
+          "packing": "5",
+          "mrp": 58.0
+        }
+      ]
+    },
+    {
+      "id": "tpn-distribution-box",
+      "name": "TPN Distribution Box",
+      "category": "distribution-mcb-boxes",
+      "brand_series": null,
+      "catalog_page": "23",
+      "description": "Three-phase (TPN) distribution boxes in single and double-door formats, 4-way through 8-way, for installations running a three-phase supply rather than single-phase — typically larger residential, commercial, or light-industrial connections.",
+      "variants": [
+        {
+          "sku": "E-631",
+          "name": "4 Way TPN Single Door",
+          "packing": "1",
+          "mrp": 1650.0
+        },
+        {
+          "sku": "E-632",
+          "name": "6 Way TPN Single Door",
+          "packing": "1",
+          "mrp": 2000.0
+        },
+        {
+          "sku": "E-633",
+          "name": "8 Way TPN Single Door",
+          "packing": "1",
+          "mrp": 2350.0
+        },
+        {
+          "sku": "E-641",
+          "name": "4 Way TPN Double Door",
+          "packing": "1",
+          "mrp": 2300.0
+        },
+        {
+          "sku": "E-642",
+          "name": "6 Way TPN Double Door",
+          "packing": "1",
+          "mrp": 2700.0
+        },
+        {
+          "sku": "E-643",
+          "name": "8 Way TPN Double Door",
+          "packing": "1",
+          "mrp": 3200.0
+        }
+      ]
+    },
+    {
+      "id": "regulator-4pf",
+      "name": "Fan Regulator (4 PF)",
+      "category": "power-extension",
+      "brand_series": null,
+      "catalog_page": "24",
+      "description": "Fan speed regulators in switch-mounted and socket-mounted types, across several design lines — Piano, Reo, Presa, Hexi, Gold, Croma — plus a basic open regulator. All are 4-step regulators; the design line sets the knob and finish rather than the electrical function, so the choice usually comes down to matching the rest of the switch plate on the wall.",
+      "variants": [
+        {
+          "sku": "R-101",
+          "name": "Piano Switch Type Regulator",
+          "packing": "20",
+          "mrp": 100.0
+        },
+        {
+          "sku": "R-102",
+          "name": "Piano Socket Type Regulator",
+          "packing": "10",
+          "mrp": 116.0
+        },
+        {
+          "sku": "R-103",
+          "name": "Reo M. Switch Type Regulator",
+          "packing": "20",
+          "mrp": 116.0
+        },
+        {
+          "sku": "R-104",
+          "name": "Reo M. Socket Type Regulator",
+          "packing": "10",
+          "mrp": 140.0
+        },
+        {
+          "sku": "R-105",
+          "name": "Presa M. Switch Type Regulator",
+          "packing": "20",
+          "mrp": 130.0
+        },
+        {
+          "sku": "R-106",
+          "name": "Presa M. Socket Type Regulator",
+          "packing": "10",
+          "mrp": 150.0
+        },
+        {
+          "sku": "R-107",
+          "name": "Hexi M. Switch Type Regulator",
+          "packing": "20",
+          "mrp": 116.0
+        },
+        {
+          "sku": "R-108",
+          "name": "Hexi M. Socket Type Regulator",
+          "packing": "10",
+          "mrp": 140.0
+        },
+        {
+          "sku": "R-109",
+          "name": "Gold M. Switch Type Regulator",
+          "packing": "20",
+          "mrp": 130.0
+        },
+        {
+          "sku": "R-110",
+          "name": "Gold M. Socket Type Regulator",
+          "packing": "10",
+          "mrp": 150.0
+        },
+        {
+          "sku": "R-113",
+          "name": "Croma M. Switch Type Regulator",
+          "packing": "20",
+          "mrp": 140.0
+        },
+        {
+          "sku": "R-114",
+          "name": "Croma M. Socket Type Regulator",
+          "packing": "10",
+          "mrp": 160.0
+        },
+        {
+          "sku": "R-115",
+          "name": "Open Regulator",
+          "packing": "10",
+          "mrp": 130.0
+        }
+      ]
+    },
+    {
+      "id": "fotolia-led-foot-light",
+      "name": "Fotolia LED Foot Light",
+      "category": "lighting-doorbell",
+      "brand_series": "Fotolia",
+      "catalog_page": "24",
+      "description": "Decorative LED foot lights and night lamps in scenery, diamond, western, stair, and shutter faceplate designs, sized from a single-module indicator light up to a large 8x5 panel. Built for skirting-level or stairway installation to light walkways at night without a full room light, with matt black and matt grey options on the western design, plus sensor and plain night-lamp variants that plug straight into a 2-pin socket rather than mounting in a wall.",
+      "variants": [
+        {
+          "sku": "E-801",
+          "name": "1 M Indicator",
+          "packing": "20",
+          "mrp": 70.0
+        },
+        {
+          "sku": "E-802",
+          "name": "2 M Scenery Foot Light",
+          "packing": "20",
+          "mrp": 95.0
+        },
+        {
+          "sku": "E-803",
+          "name": "2 M Diamond Foot Light",
+          "packing": "20",
+          "mrp": 84.0
+        },
+        {
+          "sku": "E-804",
+          "name": "2 M Western Foot Light",
+          "packing": "20",
+          "mrp": 105.0
+        },
+        {
+          "sku": "E-805",
+          "name": "2 M Stair Foot Light",
+          "packing": "20",
+          "mrp": 115.0
+        },
+        {
+          "sku": "E-806",
+          "name": "3 M Western Foot Light",
+          "packing": "10",
+          "mrp": 175.0
+        },
+        {
+          "sku": "E-807",
+          "name": "4 M Shutter Foot Light",
+          "packing": "10",
+          "mrp": 150.0
+        },
+        {
+          "sku": "E-808",
+          "name": "4 M Scenery Foot Light",
+          "packing": "10",
+          "mrp": 165.0
+        },
+        {
+          "sku": "E-809",
+          "name": "4 M Western Foot Light",
+          "packing": "10",
+          "mrp": 165.0
+        },
+        {
+          "sku": "E-810",
+          "name": "4 M Stair Foot Light",
+          "packing": "10",
+          "mrp": 240.0
+        },
+        {
+          "sku": "E-811",
+          "name": "8 X 5 Scenery Foot Light",
+          "packing": "10",
+          "mrp": 240.0
+        },
+        {
+          "sku": "E-812",
+          "name": "2 Pin Night Lamp Scenery",
+          "packing": "20",
+          "mrp": 85.0
+        },
+        {
+          "sku": "E-813",
+          "name": "2 Pin Sensor Night Lamp",
+          "packing": "20",
+          "mrp": 110.0
+        },
+        {
+          "sku": "EMB-804",
+          "name": "2 M Western Foot Light",
+          "finish": "Matt Black",
+          "packing": "20",
+          "mrp": 125.0
+        },
+        {
+          "sku": "EMB-809",
+          "name": "4 M Western Foot Light",
+          "finish": "Matt Black",
+          "packing": "10",
+          "mrp": 205.0
+        },
+        {
+          "sku": "EMG-809",
+          "name": "4 M Western Foot Light",
+          "finish": "Matt Grey",
+          "packing": "10",
+          "mrp": 205.0
+        }
+      ]
+    },
+    {
+      "id": "extension-cord-power-strip",
+      "name": "Extension Cord / Power Strip",
+      "category": "power-extension",
+      "brand_series": null,
+      "catalog_page": "25",
+      "description": "Extension cords and power strips in 1.5 to 5 metre lengths: the Ora and Classic ranges, each a 4-socket strip with a master switch, safety indicator, and international socket, rated for printers, TVs, computers, and general household electronics. The Classic range also offers a 4-socket-plus-4-switch layout for circuits needing individual on/off control per outlet.",
+      "variants": [
+        {
+          "sku": "OR-401",
+          "name": "Ora Power Strip 1.5 Meter",
+          "packing": "10",
+          "mrp": 450.0
+        },
+        {
+          "sku": "OR-403",
+          "name": "Ora Power Strip 3 Meter",
+          "packing": "10",
+          "mrp": 520.0
+        },
+        {
+          "sku": "OR-405",
+          "name": "Ora Power Strip 5 Meter",
+          "packing": "10",
+          "mrp": 600.0
+        },
+        {
+          "sku": "CL-401",
+          "name": "Classic 4+1 Extension Board 1.5 Meter",
+          "packing": "10",
+          "mrp": 400.0
+        },
+        {
+          "sku": "CL-403",
+          "name": "Classic 4+1 Extension Board 3 Meter",
+          "packing": "10",
+          "mrp": 440.0
+        },
+        {
+          "sku": "CL-405",
+          "name": "Classic 4+1 Extension Board 5 Meter",
+          "packing": "10",
+          "mrp": 510.0
+        },
+        {
+          "sku": "CL-442",
+          "name": "Classic 4+4 Extension Board 2 Meter",
+          "packing": "10",
+          "mrp": 550.0
+        },
+        {
+          "sku": "CL-444",
+          "name": "Classic 4+4 Extension Board 4 Meter",
+          "packing": "10",
+          "mrp": 650.0
+        }
+      ]
+    },
+    {
+      "id": "nova-flex-board-series",
+      "name": "Nova Flex Board Series",
+      "category": "power-extension",
+      "brand_series": "Nova",
+      "catalog_page": "26",
+      "description": "The Nova portable flex-board range — Prime, Square, Triangle, and Round body shapes, each a compact 3-way board with a master switch, safety indicator, and international socket, on a 4 or 7 metre cord. A more compact, single-socket alternative to the multi-socket Ora/Classic power strips, suited to spot power needs like a single appliance or charging point.",
+      "variants": [
+        {
+          "sku": "NP-214",
+          "name": "Nova Prime 4 Meter (2 Pin)",
+          "packing": "10",
+          "mrp": 430.0
+        },
+        {
+          "sku": "NP-217",
+          "name": "Nova Prime 7 Meter (2 Pin)",
+          "packing": "10",
+          "mrp": 500.0
+        },
+        {
+          "sku": "NV-214",
+          "name": "Nova Square 4 Meter (2 Pin)",
+          "packing": "10",
+          "mrp": 365.0
+        },
+        {
+          "sku": "NV-217",
+          "name": "Nova Square 7 Meter (2 Pin)",
+          "packing": "10",
+          "mrp": 440.0
+        },
+        {
+          "sku": "NV-224",
+          "name": "Nova Triangle 4 Meter (2 Pin)",
+          "packing": "10",
+          "mrp": 365.0
+        },
+        {
+          "sku": "NV-227",
+          "name": "Nova Triangle 7 Meter (2 Pin)",
+          "packing": "10",
+          "mrp": 440.0
+        },
+        {
+          "sku": "NV-234",
+          "name": "Nova Round 4 Meter (2 Pin)",
+          "packing": "10",
+          "mrp": 365.0
+        }
+      ]
+    },
+    {
+      "id": "pvc-simple-plate",
+      "name": "PVC Simple Plate",
+      "category": "modular-switches-plates",
+      "brand_series": null,
+      "catalog_page": "27",
+      "description": "Plain PVC blanking plates in round and square profiles from 4x4 up to 7x7, used to cover an unused holder base, junction point, or wiring opening cleanly rather than leaving it exposed.",
+      "variants": [
+        {
+          "sku": "E-401",
+          "name": "4 X 4 Round Plate",
+          "packing": "100",
+          "mrp": 15.5
+        },
+        {
+          "sku": "E-402",
+          "name": "5 X 5 Square Plate",
+          "packing": "100",
+          "mrp": 26.0
+        },
+        {
+          "sku": "E-403",
+          "name": "5 X 5 Round Plate",
+          "packing": "100",
+          "mrp": 24.0
+        },
+        {
+          "sku": "E-404",
+          "name": "6 X 6 Round Plate",
+          "packing": "100",
+          "mrp": 35.0
+        },
+        {
+          "sku": "E-405",
+          "name": "7 X 7 Round Plate",
+          "packing": "100",
+          "mrp": 39.0
+        }
+      ]
+    },
+    {
+      "id": "ezee-junction-box",
+      "name": "Ezee Junction Box",
+      "category": "concealed-surface-boxes",
+      "brand_series": "Ezee",
+      "catalog_page": "27",
+      "description": "White PVC junction boxes from a compact 4x4 up to a large 8x10, plus a single-way 7x4 box, for housing wire joins and connections at a junction point in the wiring run — sized to the number and gauge of wires being joined.",
+      "variants": [
+        {
+          "sku": "E-501",
+          "name": "4 X 4 Junction Box",
+          "finish": "White",
+          "packing": "40",
+          "mrp": 23.0
+        },
+        {
+          "sku": "E-502",
+          "name": "7 X 4 Junction Box",
+          "finish": "White",
+          "packing": "21",
+          "mrp": 50.0
+        },
+        {
+          "sku": "E-503",
+          "name": "6 X 8 Junction Box",
+          "finish": "White",
+          "packing": "12",
+          "mrp": 100.0
+        },
+        {
+          "sku": "E-504",
+          "name": "8 X 10 Junction Box",
+          "finish": "White",
+          "packing": "12",
+          "mrp": 150.0
+        },
+        {
+          "sku": "E-505",
+          "name": "7 X 4 (1 Way) Box",
+          "finish": "White",
+          "packing": "21",
+          "mrp": 60.0
+        }
+      ]
+    },
+    {
+      "id": "ezee-junction-modular-plate",
+      "name": "Ezee Junction Modular Plate",
+      "category": "modular-switches-plates",
+      "brand_series": "Ezee",
+      "catalog_page": "27",
+      "description": "An extended-length modular plate range, from a narrow 7x5 up to an 11x13 plain plate, for covering wider modular switch or socket gang arrangements than the standard single-series plates handle. Also available in a compact 8x5 format across plain, glossy white, glossy black, matt black, and grey-black finishes.",
+      "variants": [
+        {
+          "sku": "E-751",
+          "name": "7 X 5 Plain Plate",
+          "packing": "10",
+          "mrp": 84.0
+        },
+        {
+          "sku": "E-752",
+          "name": "8 X 5 Plain Plate",
+          "packing": "10",
+          "mrp": 94.0
+        },
+        {
+          "sku": "E-753",
+          "name": "9 X 5 Plain Plate",
+          "packing": "10",
+          "mrp": 110.0
+        },
+        {
+          "sku": "E-754",
+          "name": "10 X 5 Plain Plate",
+          "packing": "10",
+          "mrp": 121.0
+        },
+        {
+          "sku": "E-755",
+          "name": "11 X 5 Plain Plate",
+          "packing": "10",
+          "mrp": 132.0
+        },
+        {
+          "sku": "E-756",
+          "name": "12 X 5 Plain Plate",
+          "packing": "10",
+          "mrp": 144.0
+        },
+        {
+          "sku": "E-757",
+          "name": "13 X 5 Plain Plate",
+          "packing": "10",
+          "mrp": 155.0
+        },
+        {
+          "sku": "E-758",
+          "name": "14 X 5 Plain Plate",
+          "packing": "10",
+          "mrp": 167.0
+        },
+        {
+          "sku": "E-759",
+          "name": "16 X 5 Plain Plate",
+          "packing": "10",
+          "mrp": 190.0
+        },
+        {
+          "sku": "E-760",
+          "name": "7 X 7 Plain Plate",
+          "packing": "10",
+          "mrp": 115.0
+        },
+        {
+          "sku": "E-761",
+          "name": "7 X 9 Plain Plate",
+          "packing": "10",
+          "mrp": 150.0
+        },
+        {
+          "sku": "E-762",
+          "name": "7 X 11 Plain Plate",
+          "packing": "10",
+          "mrp": 185.0
+        },
+        {
+          "sku": "E-763",
+          "name": "7 X 13 Plain Plate",
+          "packing": "10",
+          "mrp": 220.0
+        },
+        {
+          "sku": "E-764",
+          "name": "8 X 8 Plain Plate",
+          "packing": "10",
+          "mrp": 155.0
+        },
+        {
+          "sku": "E-765",
+          "name": "8 X 10 Plain Plate",
+          "packing": "10",
+          "mrp": 190.0
+        },
+        {
+          "sku": "E-766",
+          "name": "9 X 11 Plain Plate",
+          "packing": "10",
+          "mrp": 236.0
+        },
+        {
+          "sku": "E-767",
+          "name": "11 X 13 Plain Plate",
+          "packing": "10",
+          "mrp": 345.0
+        },
+        {
+          "sku": "E-768P",
+          "name": "8 X 5 Plate (Plain)",
+          "packing": "10",
+          "mrp": 75.0
+        },
+        {
+          "sku": "E-768WH",
+          "name": "8 X 5 - 1M Plate (Glossy White)",
+          "packing": "10",
+          "mrp": 75.0
+        },
+        {
+          "sku": "E-768BK",
+          "name": "8 X 5 - 1M Plate (Glossy Black)",
+          "packing": "10",
+          "mrp": 75.0
+        },
+        {
+          "sku": "E-768MB",
+          "name": "8 X 5 - 1M Plate (Matt Black)",
+          "packing": "10",
+          "mrp": 115.0
+        },
+        {
+          "sku": "E-768MG",
+          "name": "8 X 5 - 1M Plate (Grey Black)",
+          "packing": "10",
+          "mrp": 115.0
+        }
+      ]
+    },
+    {
+      "id": "pvc-open-switch-board",
+      "name": "PVC Open Switch Board",
+      "category": "modular-switches-plates",
+      "brand_series": null,
+      "catalog_page": "28",
+      "description": "Open (non-modular) PVC switch boards in orange and white, from a single blank plate up to an 8-way board, with dedicated single-pole (S.P.) and combined socket-switch (S.S.C.) layouts. A traditional open-board format for jobs not standardising on the modular plate system used elsewhere in the range.",
+      "colors_available": [
+        "Orange",
+        "White"
+      ],
+      "variants": [
+        {
+          "sku": "SB1201",
+          "name": "3.5x3.5x1 Plain, 1 Way",
+          "packing": "20/720",
+          "mrp": 26.0
+        },
+        {
+          "sku": "SB1202",
+          "name": "3.5x4x1 (1+1)",
+          "packing": "20/640",
+          "mrp": 29.0
+        },
+        {
+          "sku": "SB1203",
+          "name": "3.5x5x1 (2+1)",
+          "packing": "20/560",
+          "mrp": 33.0
+        },
+        {
+          "sku": "SB1204",
+          "name": "3.5x7x1 Plain / 1 Way / 2+2 / 3+1",
+          "packing": "20/480",
+          "mrp": 40.0
+        },
+        {
+          "sku": "SB1205",
+          "name": "3.5x8x2 (2+2 / 4+1 / 3+2)",
+          "packing": "20/320",
+          "mrp": 45.0
+        },
+        {
+          "sku": "SB1206",
+          "name": "7x4x2 15 AMP S.S.C. / S.P.+S.P.",
+          "packing": "20/320",
+          "mrp": 50.0
+        },
+        {
+          "sku": "SB1207",
+          "name": "6x6x2 6 Way / 3+3",
+          "packing": "20/200",
+          "mrp": 68.0
+        },
+        {
+          "sku": "SB1208",
+          "name": "10x4x2 6 Way / 3+3",
+          "packing": "20/200",
+          "mrp": 68.0
+        },
+        {
+          "sku": "SB1209",
+          "name": "6x8x1 (Hz) Plain / 4-8 Way",
+          "packing": "20/320",
+          "mrp": 68.0
+        },
+        {
+          "sku": "SB1210",
+          "name": "6x8x2 (Hz) Plain / 4-8 Way",
+          "packing": "20/200",
+          "mrp": 79.0
+        },
+        {
+          "sku": "SB1211",
+          "name": "6x8x1 (V) 6 to 10 Way",
+          "packing": "20/240",
+          "mrp": 68.0
+        },
+        {
+          "sku": "SB1212",
+          "name": "6x8x2 (V) S.S.C. / S.P.+S.P. / 6 to 10 Way",
+          "packing": "20/200",
+          "mrp": 79.0
+        },
+        {
+          "sku": "SB1213",
+          "name": "7x9x2 (V) 4 to 12 Way",
+          "packing": "10/120",
+          "mrp": 92.0
+        },
+        {
+          "sku": "SB1214",
+          "name": "8x10x2 (V) Plain / 4 to 12 Way",
+          "packing": "10/100",
+          "mrp": 100.0
+        },
+        {
+          "sku": "SB1215",
+          "name": "10x12x2 (V) Plain",
+          "packing": "5/50",
+          "mrp": 120.0
+        }
+      ]
+    },
+    {
+      "id": "fancy-orange-surface-board",
+      "name": "Fancy Orange Surface Board",
+      "category": "modular-switches-plates",
+      "brand_series": null,
+      "finish": "Orange",
+      "catalog_page": "29",
+      "description": "A large-format orange surface board range, from a compact 4x4 up to a 10x12 board, for surface-mount installations that need more space than the standard modular gang boxes provide — typically multi-switch or multi-socket panels mounted directly on the wall face.",
+      "variants": [
+        {
+          "sku": "O-101",
+          "name": "4x4x1 Surface Board",
+          "packing": "20",
+          "mrp": 58.0
+        },
+        {
+          "sku": "O-102",
+          "name": "4x4x2 Surface Board",
+          "packing": "20",
+          "mrp": 72.0
+        },
+        {
+          "sku": "O-103",
+          "name": "4x6x2 Surface Board",
+          "packing": "20",
+          "mrp": 92.0
+        },
+        {
+          "sku": "O-104",
+          "name": "4x7x1 Surface Board",
+          "packing": "20",
+          "mrp": 84.0
+        },
+        {
+          "sku": "O-105",
+          "name": "4x7x2 Surface Board",
+          "packing": "20",
+          "mrp": 96.0
+        },
+        {
+          "sku": "O-106",
+          "name": "4x8x2 Surface Board",
+          "packing": "10",
+          "mrp": 108.0
+        },
+        {
+          "sku": "O-107",
+          "name": "4x9x2 Surface Board",
+          "packing": "10",
+          "mrp": 120.0
+        },
+        {
+          "sku": "O-108",
+          "name": "4x10x2 Surface Board",
+          "packing": "10",
+          "mrp": 132.0
+        },
+        {
+          "sku": "O-109",
+          "name": "4x11x2 Surface Board",
+          "packing": "10",
+          "mrp": 144.0
+        },
+        {
+          "sku": "O-110",
+          "name": "4x12x2 Surface Board",
+          "packing": "10",
+          "mrp": 162.0
+        },
+        {
+          "sku": "O-111",
+          "name": "4x14x2 Surface Board",
+          "packing": "5",
+          "mrp": 216.0
+        },
+        {
+          "sku": "O-112",
+          "name": "7x7x2 Surface Board",
+          "packing": "10",
+          "mrp": 126.0
+        },
+        {
+          "sku": "O-113",
+          "name": "7x8x2 Surface Board",
+          "packing": "10",
+          "mrp": 156.0
+        },
+        {
+          "sku": "O-114",
+          "name": "7x9x2 Surface Board",
+          "packing": "10",
+          "mrp": 180.0
+        },
+        {
+          "sku": "O-115",
+          "name": "8x8x2 Surface Board",
+          "packing": "10",
+          "mrp": 192.0
+        },
+        {
+          "sku": "O-116",
+          "name": "8x10x2 Surface Board",
+          "packing": "10",
+          "mrp": 216.0
+        },
+        {
+          "sku": "O-117",
+          "name": "10x12x2 Surface Board",
+          "packing": "5",
+          "mrp": 360.0
+        }
+      ]
+    },
+    {
+      "id": "drywall-black-screw",
+      "name": "Drywall Black Screw",
+      "category": "wiring-accessories",
+      "brand_series": null,
+      "catalog_page": "29",
+      "description": "Black drywall screws from 0.50 inch up to 3.00 inch, sold in bulk packs of 200 to 1000, for mounting switch boxes, plates, and fixtures into drywall and partition walls during installation.",
+      "variants": [
+        {
+          "sku": "DS6013",
+          "name": "6 X 13 (0.50 Inch)",
+          "packing": "1000",
+          "mrp": 470.0
+        },
+        {
+          "sku": "DS6016",
+          "name": "6 X 16 (0.60 Inch)",
+          "packing": "1000",
+          "mrp": 500.0
+        },
+        {
+          "sku": "DS6019",
+          "name": "6 X 19 (0.75 Inch)",
+          "packing": "1000",
+          "mrp": 515.0
+        },
+        {
+          "sku": "DS6025",
+          "name": "6 X 25 (1.00 Inch)",
+          "packing": "1000",
+          "mrp": 630.0
+        },
+        {
+          "sku": "DS6032",
+          "name": "6 X 32 (1.25 Inch)",
+          "packing": "500",
+          "mrp": 410.0
+        },
+        {
+          "sku": "DS6038",
+          "name": "6 X 38 (1.50 Inch)",
+          "packing": "500",
+          "mrp": 490.0
+        },
+        {
+          "sku": "DS6050",
+          "name": "6 X 50 (2.00 Inch)",
+          "packing": "250",
+          "mrp": 360.0
+        },
+        {
+          "sku": "DS6060",
+          "name": "6 X 60 (2.50 Inch)",
+          "packing": "250",
+          "mrp": 470.0
+        },
+        {
+          "sku": "DS6075",
+          "name": "6 X 75 (3.00 Inch)",
+          "packing": "200",
+          "mrp": 600.0
+        }
+      ]
+    },
+    {
+      "id": "door-bell",
+      "name": "Door Bell",
+      "category": "lighting-doorbell",
+      "brand_series": null,
+      "catalog_page": "29",
+      "description": "Wired door bells in five styles — Bubble and Woofer ding-dong tones, a multi-tune bell, a parrot-sound bell, and a water-alarm bell — for standard household entrance signalling.",
+      "variants": [
+        {
+          "sku": "E-251",
+          "name": "Bubble Ding Dong Bell",
+          "packing": "10",
+          "mrp": 275.0
+        },
+        {
+          "sku": "E-252",
+          "name": "Woofer Ding Dong Bell",
+          "packing": "10",
+          "mrp": 275.0
+        },
+        {
+          "sku": "E-253",
+          "name": "Multi Tune Bell",
+          "packing": "10",
+          "mrp": 360.0
+        },
+        {
+          "sku": "E-254",
+          "name": "Parrot Bell",
+          "packing": "10",
+          "mrp": 210.0
+        },
+        {
+          "sku": "E-255",
+          "name": "Water Alarm Bell",
+          "packing": "10",
+          "mrp": 420.0
+        }
+      ]
+    }
+  ]
+}

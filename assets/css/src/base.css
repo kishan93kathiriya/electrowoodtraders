@@ -1,0 +1,226 @@
+/* ==========================================================================
+   ELECTRO — base: fonts, reset additions, surfaces, buttons, glass, reveal
+   ========================================================================== */
+
+/* ---- Fonts (self-hosted, latin subset, font-display: swap) ---------------
+   Fallbacks are metric-matched to Arial so the swap doesn't move layout.   */
+@font-face {
+  font-family: "Sora";
+  src: url("../fonts/sora-var-latin.woff2") format("woff2");
+  font-weight: 400 800;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/inter-var-latin.woff2") format("woff2");
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Sora Fallback";
+  src: local("Arial");
+  size-adjust: 111%;
+  ascent-override: 88%;
+  descent-override: 22%;
+  line-gap-override: 0%;
+}
+@font-face {
+  font-family: "Inter Fallback";
+  src: local("Arial");
+  size-adjust: 107.4%;
+  ascent-override: 90.2%;
+  descent-override: 22.48%;
+  line-gap-override: 0%;
+}
+
+/* ---- Registered properties (so custom props can transition) --------------- */
+@property --px { syntax: "<percentage>"; inherits: false; initial-value: 30%; }
+@property --py { syntax: "<percentage>"; inherits: false; initial-value: 20%; }
+@property --pl { syntax: "<length>"; inherits: false; initial-value: 0px; }
+@property --pr { syntax: "<length>"; inherits: false; initial-value: 0px; }
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    scrollbar-gutter: stable;
+    background: var(--color-teal-night);
+    scroll-padding-top: var(--spacing-nav);
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    html { scroll-behavior: smooth; }
+  }
+
+  body {
+    margin: 0;
+    font-family: var(--font-body);
+    font-size: var(--text-base);
+    line-height: 1.55;
+    color: var(--color-charcoal);
+    background: var(--color-white);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    font-optical-sizing: auto;
+    overflow-x: clip;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    text-wrap: balance;
+    margin: 0;
+  }
+  p { margin: 0; text-wrap: pretty; }
+  ul, ol { margin: 0; padding: 0; list-style: none; }
+  a { color: inherit; text-decoration: none; }
+  img, svg, canvas, picture { display: block; max-width: 100%; }
+  button { font: inherit; color: inherit; background: none; border: 0; padding: 0; cursor: pointer; }
+
+  ::selection { background: var(--color-teal); color: var(--color-teal-night); }
+
+  /* Visible, animated focus — never outline:none without a replacement */
+  :where(a, button, [tabindex], input, summary):focus-visible {
+    outline: 2px solid var(--focus, var(--color-teal-ink));
+    outline-offset: 3px;
+    border-radius: var(--focus-radius, 6px);
+    animation: focus-in var(--duration-instant) var(--ease-smooth);
+  }
+  :where(a, button, [tabindex]):focus:not(:focus-visible) { outline: none; }
+}
+
+@keyframes focus-in {
+  from { outline-offset: 9px; outline-color: transparent; }
+}
+
+@layer components {
+  /* ---- Surfaces: one place that decides fg / bg / hairline / focus ------- */
+  [data-theme="dark"]  { --bg: var(--color-teal-night); --fg: #fff; --fg-2: rgb(255 255 255 / 0.68); --line: rgb(255 255 255 / 0.14); --accent: var(--color-teal);     --focus: var(--color-amber); }
+  [data-theme="deep"]  { --bg: var(--color-teal-deep);  --fg: #fff; --fg-2: rgb(255 255 255 / 0.7);  --line: rgb(255 255 255 / 0.16); --accent: var(--color-teal);     --focus: var(--color-amber); }
+  [data-theme="light"] { --bg: var(--color-offwhite);   --fg: var(--color-charcoal); --fg-2: var(--color-slate); --line: rgb(0 0 0 / 0.1); --accent: var(--color-teal-ink); --focus: var(--color-teal-ink); }
+  [data-theme="white"] { --bg: var(--color-white);      --fg: var(--color-charcoal); --fg-2: var(--color-slate); --line: rgb(0 0 0 / 0.1); --accent: var(--color-teal-ink); --focus: var(--color-teal-ink); }
+  [data-theme] { background: var(--bg); color: var(--fg); }
+
+  .wrap {
+    width: 100%;
+    max-width: var(--container-wide);
+    margin-inline: auto;
+    padding-inline: var(--spacing-gutter);
+  }
+  .wrap--reading { max-width: calc(var(--container-reading) + 2 * var(--spacing-gutter)); margin-inline: 0; }
+
+  .section { position: relative; padding-block: var(--spacing-section); }
+
+  .eyebrow {
+    font: 600 var(--text-sm)/1.4 var(--font-heading);
+    letter-spacing: 0.01em;
+    color: var(--accent);
+  }
+  .h2 {
+    font-size: var(--text-h2);
+    line-height: var(--text-h2--line-height);
+    letter-spacing: var(--text-h2--letter-spacing);
+    margin-top: 0.75rem;
+  }
+  .lede {
+    font-size: var(--text-lede);
+    line-height: var(--text-lede--line-height);
+    color: var(--fg-2);
+    max-width: 38rem;
+    margin-top: 1.25rem;
+  }
+
+  /* ---- Buttons ----------------------------------------------------------- */
+  .btn {
+    --s: 1;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    min-height: 3.25rem;                       /* >= 44px target */
+    padding: 0 1.75rem;
+    border-radius: var(--radius-pill);
+    font: 600 0.9375rem/1 var(--font-heading);
+    letter-spacing: -0.005em;
+    white-space: nowrap;
+    isolation: isolate;
+    transform: translate3d(var(--mx, 0px), var(--my, 0px), 0) scale(var(--s));
+    transition:
+      transform var(--spring-snappy-duration) var(--spring-snappy),
+      box-shadow var(--duration-normal) var(--ease-smooth),
+      background-position var(--duration-slow) var(--ease-smooth),
+      background-color var(--duration-fast) var(--ease-sharp),
+      border-color var(--duration-fast) var(--ease-sharp);
+  }
+  .btn:active { --s: var(--scale-subtle); transition-duration: var(--duration-instant); }
+
+  /* Amber -> Gold is ALWAYS a gradient (AGENTS.md). Charcoal text = 7.07:1+ */
+  .btn--primary {
+    color: var(--color-charcoal);
+    background: linear-gradient(115deg, var(--color-amber) 0%, var(--color-gold) 50%, var(--color-amber) 100%);
+    background-size: 220% 100%;
+    background-position: 0% 50%;
+    box-shadow: 0 1px 0 rgb(255 255 255 / 0.45) inset, 0 10px 30px -12px rgb(250 182 5 / 0.55);
+  }
+  .btn--primary:hover { background-position: 100% 50%; box-shadow: 0 1px 0 rgb(255 255 255 / 0.5) inset, 0 16px 40px -12px rgb(250 182 5 / 0.7); }
+
+  .btn--ghost {
+    color: var(--fg);
+    border: 1px solid var(--line);
+    background: rgb(255 255 255 / 0.04);
+    -webkit-backdrop-filter: blur(14px) saturate(160%);
+    backdrop-filter: blur(14px) saturate(160%);
+  }
+  .btn--ghost:hover { background: rgb(255 255 255 / 0.1); border-color: rgb(255 255 255 / 0.32); }
+  [data-theme="light"] .btn--ghost, [data-theme="white"] .btn--ghost { background: transparent; border-color: rgb(0 0 0 / 0.2); }
+  [data-theme="light"] .btn--ghost:hover { background: rgb(0 0 0 / 0.05); border-color: rgb(0 0 0 / 0.35); }
+
+  .btn svg { width: 1.05em; height: 1.05em; flex: none; }
+
+  /* ---- Liquid-glass material: interactive surfaces only ------------------ */
+  .glass {
+    background: rgb(4 48 45 / 0.5);
+    -webkit-backdrop-filter: blur(22px) saturate(180%);
+    backdrop-filter: blur(22px) saturate(180%);
+    border: 1px solid rgb(255 255 255 / 0.12);
+    box-shadow: var(--shadow-glass);
+  }
+  @supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+    .glass { background: rgb(4 48 45 / 0.94); }
+  }
+
+  /* ---- Scroll-reveal: hidden only while JS is alive (see head script) ---- */
+  .js [data-reveal] {
+    opacity: 0;
+    transform: translate3d(0, var(--distance-lg), 0);
+  }
+  .js [data-reveal].is-in {
+    opacity: 1;
+    transform: none;
+    transition:
+      opacity var(--duration-slow) var(--ease-smooth),
+      transform var(--spring-gentle-duration) var(--spring-gentle);
+    transition-delay: calc(var(--i, 0) * 70ms);
+  }
+
+  /* hairlines that extend from the centre */
+  .rule {
+    position: absolute; inset: 0 0 auto 0; height: 1px;
+    background: var(--line);
+    transform-origin: 50% 50%;
+  }
+  .js .rule { transform: scaleX(0); }
+  .js .is-in > .rule, .js .rule.is-in { transform: scaleX(1); transition: transform 1100ms var(--ease-smooth); }
+}
+
+/* Reduced motion: no transforms anywhere; fades only, <= 200ms ------------ */
+@media (prefers-reduced-motion: reduce) {
+  .js [data-reveal] { transform: none; }
+  .js [data-reveal].is-in { transition: opacity var(--duration-fast) linear; transition-delay: 0ms; }
+  .js .rule, .js .rule.is-in, .js .is-in > .rule { transform: none; transition: none; }
+  .btn, .btn:active { transform: none; transition-property: background-color, border-color, box-shadow; transition-duration: var(--duration-fast); }
+  :where(a, button, [tabindex]):focus-visible { animation: none; }
+}

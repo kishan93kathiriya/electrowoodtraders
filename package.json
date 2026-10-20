@@ -1,0 +1,31 @@
+{
+  "name": "electro-enterprise-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "ELECTRO — Electro Enterprise dealer catalogue site. Static HTML/CSS/JS output; Tailwind CLI + esbuild are build-time only.",
+  "type": "module",
+  "scripts": {
+    "build:springs": "node build/gen-springs.mjs",
+    "build:css": "tailwindcss -i assets/css/src/tailwind.css -o assets/css/site.css --minify",
+    "build:js": "node build/bundle.mjs",
+    "build:html": "node build/assemble.mjs",
+    "build": "npm run build:springs && npm run build:css && npm run build:js && npm run build:html",
+    "watch:css": "tailwindcss -i assets/css/src/tailwind.css -o assets/css/site.css --watch",
+    "serve": "node build/serve.mjs",
+    "start": "npm run build && npm run serve",
+    "verify:counts": "node build/verify-counts.mjs",
+    "images": "node build/product-images.mjs",
+    "stills": "node build/capture-stills.mjs",
+    "shot": "node build/shot.mjs",
+    "perf3d": "node build/perf3d.mjs",
+    "lighthouse:mobile": "lighthouse http://localhost:4173/ --only-categories=performance,accessibility,best-practices,seo --chrome-flags=\"--headless=new\" --output=html --output=json --output-path=./.lighthouse/mobile",
+    "lighthouse:desktop": "lighthouse http://localhost:4173/ --preset=desktop --only-categories=performance,accessibility,best-practices,seo --chrome-flags=\"--headless=new\" --output=html --output=json --output-path=./.lighthouse/desktop"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.1.0",
+    "esbuild": "^0.25.0",
+    "lighthouse": "^12.0.0",
+    "tailwindcss": "^4.1.0",
+    "three": "^0.170.0"
+  }
+}

@@ -1,0 +1,124 @@
+/* ==========================================================================
+   ELECTRO — the range tour + manifesto
+   Default = a calm 3-column grid of six cards (no JS / no 3D / reduced motion).
+   When the cinematic hero is running, JS moves .tour__inner into the pinned stage,
+   adds .tour--pinned, and reveals one article at a time. Articles are NEVER
+   visibility:hidden — inactive ones are only opacity:0 — so screen readers still
+   read all six, in order.
+   ========================================================================== */
+
+@layer components {
+  .tour { padding-block: var(--spacing-section); }
+  .tour__head { max-width: 46rem; }
+  .tour__list { display: grid; gap: 1rem; margin-top: var(--spacing-block); grid-template-columns: minmax(0, 1fr); }
+  @media (min-width: 40rem) { .tour__list { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.25rem; } }
+  @media (min-width: 64rem) { .tour__list { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.5rem; } }
+
+  .tour__beat {
+    position: relative; display: flex; flex-direction: column;
+    padding: 1.75rem; border-radius: var(--radius-lg); color: #fff;
+    background: linear-gradient(165deg, var(--color-teal-deep), #031f1d);
+    border: 1px solid rgb(255 255 255 / 0.08);
+    box-shadow: var(--shadow-card);
+  }
+  .tour__n { font: 600 var(--text-sm)/1 var(--font-heading); letter-spacing: 0.04em; color: var(--color-teal); font-variant-numeric: tabular-nums; }
+  .tour__n span { color: #fff; }
+  .tour__h { margin-top: 1rem; font-size: var(--text-h3); line-height: var(--text-h3--line-height); letter-spacing: var(--text-h3--letter-spacing); }
+  .tour__desc { margin-top: 0.7rem; font-size: 0.9375rem; line-height: 1.5; color: rgb(255 255 255 / 0.76); }
+  .tour__meta { margin-top: 1rem; font: 500 var(--text-sm)/1.4 var(--font-body); color: rgb(255 255 255 / 0.72); }
+  .tour__fams { margin-top: 0.9rem; padding-top: 0.9rem; display: grid; gap: 0.35rem; font-size: 0.875rem; border-top: 1px solid rgb(255 255 255 / 0.12); }
+  .tour__fams li { display: flex; justify-content: space-between; gap: 1rem; color: rgb(255 255 255 / 0.88); }
+  .tour__series { align-self: center; flex: none; font: 600 0.75rem/1 var(--font-heading); color: var(--color-teal); }
+  .tour__link {
+    margin-top: auto; padding-top: 1.4rem; min-height: 2.75rem;
+    display: inline-flex; align-items: center; gap: 0.5rem; align-self: flex-start;
+    font: 600 0.875rem/1 var(--font-heading); color: var(--color-teal);
+    transition: color var(--duration-fast) var(--ease-sharp);
+  }
+  .tour__link svg { width: 1rem; height: 1rem; transition: transform var(--spring-snappy-duration) var(--spring-snappy); }
+  @media (hover: hover) and (pointer: fine) {
+    .tour__link:hover { color: var(--color-amber); }
+    .tour__link:hover svg { transform: translate3d(5px, 0, 0); }
+  }
+
+  /* ---- Pinned: captions float over the 3D stage ------------------------------------ */
+  .tour--pinned {
+    position: absolute; inset: 0; z-index: 3; pointer-events: none;
+    padding-top: var(--spacing-nav); padding-bottom: 2rem;
+    display: flex; align-items: center;
+  }
+  .tour--pinned .tour__head {
+    position: absolute; width: 1px; height: 1px; margin: -1px; overflow: hidden;
+    clip-path: inset(50%); white-space: nowrap;                    /* still in the a11y tree, not on screen */
+  }
+  .tour--pinned .tour__list { display: block; margin: 0; position: relative; height: 0; width: min(28rem, 100%); }
+  .tour--pinned .tour__beat {
+    position: absolute; left: 0; right: 0; top: 0;
+    padding: 1.6rem 1.6rem 1.35rem;
+    background: rgb(4 48 45 / 0.5);
+    -webkit-backdrop-filter: blur(22px) saturate(180%); backdrop-filter: blur(22px) saturate(180%);
+    border: 1px solid rgb(255 255 255 / 0.14);
+    box-shadow: var(--shadow-glass);
+    opacity: 0; pointer-events: none;
+    transform: translate3d(0, calc(-50% + 16px), 0);              /* future beats wait below… */
+    transition: opacity 250ms var(--ease-smooth), transform 350ms var(--ease-smooth);
+  }
+  .tour--pinned .tour__beat.is-past { transform: translate3d(0, calc(-50% - 16px), 0); }   /* …past beats left upward: same path back */
+  .tour--pinned .tour__beat.is-active { opacity: 1; pointer-events: auto; transform: translate3d(0, -50%, 0); }
+  .tour--pinned .tour__fams li { opacity: 0; transform: translate3d(0, 6px, 0); transition: opacity 250ms var(--ease-smooth), transform 350ms var(--ease-smooth); }
+  .tour--pinned .is-active .tour__fams li { opacity: 1; transform: none; transition-delay: calc(var(--k, 0) * 40ms + 140ms); }
+  .tour__fams li:nth-child(2) { --k: 1; }
+  .tour__fams li:nth-child(3) { --k: 2; }
+  .tour__fams li:nth-child(4) { --k: 3; }
+
+  /* progress dots (created by JS; only in the pinned tour) */
+  .tdots { position: absolute; z-index: 5; right: var(--spacing-gutter); top: 50%; transform: translateY(-50%); display: none; flex-direction: column; gap: 0.15rem; }
+  .tdot { position: relative; width: 2rem; height: 2rem; display: grid; place-items: center; border-radius: 50%; }
+  .tdot::before {
+    content: ""; width: 0.5rem; height: 0.5rem; border-radius: 50%; background: rgb(255 255 255 / 0.4);
+    transition: transform var(--spring-snappy-duration) var(--spring-snappy), background-color var(--duration-fast) var(--ease-sharp);
+  }
+  .tdot[aria-current="true"]::before { transform: scale(1.5); background: linear-gradient(135deg, var(--color-amber), var(--color-gold)); }
+  .hero--chapter .tdots.is-on { display: flex; }
+  @media (max-width: 63.99rem) { .tdots { display: none !important; } }
+
+  @media (max-width: 47.99rem), (max-width: 63.99rem) and (orientation: portrait) {
+    .tour--pinned { align-items: flex-end; padding-bottom: 1rem; }
+    .tour--pinned .tour__list { width: 100%; }
+    .tour--pinned .tour__beat { top: auto; bottom: 0; padding: 1.2rem 1.25rem 1rem; transform: translate3d(0, 16px, 0); }
+    .tour--pinned .tour__beat.is-past { transform: translate3d(0, -16px, 0); }
+    .tour--pinned .tour__beat.is-active { transform: none; }
+    .tour--pinned .tour__fams, .tour--pinned .tour__desc { display: none; }
+    .tour--pinned .tour__h { margin-top: 0.6rem; }
+    .tour--pinned .tour__link { padding-top: 0.8rem; }
+  }
+
+  /* ---- Manifesto: the sentence lights up word by word ---------------------------------- */
+  .manifesto { padding-block: calc(var(--spacing-section) * 1.1); }
+  .manifesto__p {
+    font: 700 clamp(1.75rem, 1rem + 3.2vw, 3.5rem)/1.18 var(--font-heading);
+    letter-spacing: -0.03em; max-width: 56rem; text-wrap: pretty;
+  }
+  .w { transition: color 300ms var(--ease-smooth), text-shadow 400ms var(--ease-smooth); }
+  /* unlit = 60% white (7.0:1 on teal-night — AA even before it lights); lit = full white + a warm glow */
+  .js .w:not(.is-lit) { color: rgb(255 255 255 / 0.6); }
+  .js .w.is-lit { color: #fff; text-shadow: 0 0 32px rgb(250 182 5 / 0.28); }
+  .burn {
+    background-image: linear-gradient(90deg, var(--color-amber), var(--color-gold));
+    background-repeat: no-repeat; background-position: 0 96%; background-size: 100% 0.055em;
+  }
+  .js .burn { background-size: 0% 0.055em; transition: background-size 900ms var(--ease-smooth); }
+  .js .burn.is-lit { background-size: 100% 0.055em; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tour--pinned .tour__beat, .tour--pinned .tour__beat.is-past, .tour--pinned .tour__beat.is-active { transform: translate3d(0, -50%, 0); transition: opacity var(--duration-fast) linear; }
+  .tour--pinned .tour__fams li, .tour--pinned .is-active .tour__fams li { transform: none; transition: opacity var(--duration-fast) linear; transition-delay: 0ms; }
+  .tour__link:hover svg { transform: none; }
+  .js .w:not(.is-lit) { color: #fff; }
+  .js .w { transition: none; }
+  .js .burn { background-size: 100% 0.055em; transition: none; }
+}
+@media (prefers-reduced-transparency: reduce) {
+  .tour--pinned .tour__beat, .pop { background: rgb(4 48 45 / 0.97); -webkit-backdrop-filter: none; backdrop-filter: none; }
+}

@@ -1,0 +1,174 @@
+/* ==========================================================================
+   ELECTRO — header: floating liquid-glass capsule + mobile glass sheet
+   Glass is reserved for interactive surfaces (nav, sheet, hero switch).
+   ========================================================================== */
+
+@layer components {
+  .skip {
+    position: fixed; top: 0.75rem; left: 0.75rem; z-index: 100;
+    padding: 0.8rem 1.25rem;
+    border-radius: var(--radius-pill);
+    background: var(--color-white); color: var(--color-charcoal);
+    font: 600 0.875rem/1 var(--font-heading);
+    box-shadow: 0 10px 30px -10px rgb(0 0 0 / 0.5);
+    transform: translateY(-220%);
+    transition: transform var(--spring-snappy-duration) var(--spring-snappy);
+  }
+  .skip:focus-visible { transform: none; outline-color: var(--color-teal-ink); }
+
+  .nav {
+    position: fixed; z-index: 60; inset: 0.75rem 0 auto 0;
+    display: flex; justify-content: center;
+    padding-inline: var(--spacing-gutter);
+    pointer-events: none;
+    transition: transform var(--spring-snappy-duration) var(--spring-snappy);
+  }
+  .nav[data-hidden="true"] { transform: translate3d(0, calc(-100% - 1.5rem), 0); }
+
+  .nav__bar {
+    pointer-events: auto;
+    position: relative;
+    display: flex; align-items: center; gap: 0.5rem;
+    width: min(100%, 78rem);
+    height: 3.5rem;
+    padding: 0 0.5rem 0 0.625rem;
+    border-radius: var(--radius-pill);
+    color: #fff;
+    background: rgb(4 48 45 / 0.46);
+    -webkit-backdrop-filter: blur(22px) saturate(180%);
+    backdrop-filter: blur(22px) saturate(180%);
+    border: 1px solid rgb(255 255 255 / 0.14);
+    box-shadow: 0 1px 0 rgb(255 255 255 / 0.2) inset, 0 12px 40px -14px rgb(2 27 25 / 0.6);
+    transition:
+      background-color var(--duration-normal) var(--ease-smooth),
+      border-color var(--duration-normal) var(--ease-smooth),
+      color var(--duration-normal) var(--ease-smooth),
+      box-shadow var(--duration-normal) var(--ease-smooth);
+  }
+  /* soft specular sheen across the top of the capsule */
+  .nav__bar::before {
+    content: ""; position: absolute; inset: 0; border-radius: inherit; pointer-events: none;
+    background: linear-gradient(180deg, rgb(255 255 255 / 0.1), transparent 55%);
+  }
+  .nav[data-theme="light"] .nav__bar {
+    color: var(--color-charcoal);
+    background: rgb(255 255 255 / 0.72);
+    border-color: rgb(0 0 0 / 0.08);
+    box-shadow: 0 1px 0 rgb(255 255 255 / 0.9) inset, 0 12px 40px -16px rgb(0 0 0 / 0.28);
+  }
+  .nav[data-theme="light"] .nav__bar::before { background: linear-gradient(180deg, rgb(255 255 255 / 0.7), transparent 60%); }
+  .nav[data-theme="light"] { --focus: var(--color-teal-ink); }
+  .nav[data-theme="dark"]  { --focus: var(--color-amber); }
+  @supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+    .nav__bar { background: rgb(4 48 45 / 0.95); }
+    .nav[data-theme="light"] .nav__bar { background: rgb(255 255 255 / 0.96); }
+  }
+
+  .nav__logo { display: flex; align-items: center; flex: none; border-radius: 10px; }
+  .nav__logo img { height: 2.25rem; width: auto; border-radius: 8px; }
+
+  /* ---- Desktop links with a gliding highlight pill ---------------------- */
+  .nav__links { display: none; position: relative; align-items: center; height: 2.5rem; margin-inline: auto; }
+  .nav__links::before {
+    content: ""; position: absolute; inset: 0; border-radius: var(--radius-pill);
+    background: rgb(255 255 255 / 0.15);
+    clip-path: inset(0 var(--pr) 0 var(--pl) round 999px);
+    opacity: 0;
+    transition:
+      --pl var(--spring-snappy-duration) var(--spring-snappy),
+      --pr var(--spring-snappy-duration) var(--spring-snappy),
+      opacity var(--duration-fast) var(--ease-sharp);
+  }
+  .nav[data-theme="light"] .nav__links::before { background: rgb(0 0 0 / 0.07); }
+  .nav__links[data-active]::before { opacity: 1; }
+  .nav__links.no-anim::before { transition: none; }
+
+  .nav__link {
+    position: relative; z-index: 1;
+    display: inline-flex; align-items: center;
+    height: 2.5rem; padding-inline: 0.9rem;
+    border-radius: var(--radius-pill);
+    font: 500 0.875rem/1 var(--font-body);
+    letter-spacing: -0.005em; white-space: nowrap;
+    opacity: 0.92;
+  }
+  .nav__link:hover, .nav__link:focus-visible { opacity: 1; }
+  .nav__link[aria-current="page"] { opacity: 1; font-weight: 600; }
+
+  .nav__cta { min-height: 2.5rem; padding: 0 1.2rem; font-size: 0.8125rem; display: none; margin-left: auto; }
+
+  .nav__burger {
+    margin-left: auto; position: relative;
+    width: 2.75rem; height: 2.75rem; border-radius: 50%;
+    display: grid; place-items: center;
+    --s: 1; transform: scale(var(--s));
+    transition: transform var(--spring-snappy-duration) var(--spring-snappy), background-color var(--duration-fast) var(--ease-sharp);
+  }
+  .nav__burger:hover { background: rgb(255 255 255 / 0.1); }
+  .nav[data-theme="light"] .nav__burger:hover { background: rgb(0 0 0 / 0.06); }
+  .nav__burger:active { --s: var(--scale-press); transition-duration: var(--duration-instant); }
+  .nav__burger span {
+    position: absolute; width: 1.15rem; height: 1.5px; border-radius: 2px; background: currentColor;
+    transition: transform var(--spring-snappy-duration) var(--spring-snappy);
+  }
+  .nav__burger span:nth-child(1) { transform: translateY(-4px); }
+  .nav__burger span:nth-child(2) { transform: translateY(4px); }
+  .nav__burger[aria-expanded="true"] span:nth-child(1) { transform: rotate(45deg); }
+  .nav__burger[aria-expanded="true"] span:nth-child(2) { transform: rotate(-45deg); }
+
+  @media (min-width: 40rem) { .nav__cta { display: inline-flex; } .nav__cta + .nav__burger { margin-left: 0; } }
+  @media (min-width: 70rem) {
+    .nav__links { display: flex; }
+    .nav__burger { display: none; }
+    .nav__cta { margin-left: 0; }
+  }
+
+  /* ---- Mobile glass sheet: expands from the burger -------------------- */
+  .sheet {
+    position: fixed; inset: 0; z-index: 55;
+    display: flex; flex-direction: column; justify-content: center;
+    padding: 6.75rem var(--spacing-gutter) 3rem;
+    overflow-y: auto;
+    color: #fff;
+    background: rgb(2 27 25 / 0.84);
+    -webkit-backdrop-filter: blur(30px) saturate(180%);
+    backdrop-filter: blur(30px) saturate(180%);
+    clip-path: circle(0px at var(--ox, calc(100% - 2.5rem)) var(--oy, 2.5rem));
+    visibility: hidden;
+    transition: clip-path 650ms var(--ease-smooth), visibility 0s linear 650ms;
+    --focus: var(--color-amber);
+  }
+  .sheet[data-open="true"] {
+    clip-path: circle(150vmax at var(--ox, calc(100% - 2.5rem)) var(--oy, 2.5rem));
+    visibility: visible;
+    transition: clip-path 800ms var(--ease-smooth), visibility 0s;
+  }
+  .sheet__list { display: grid; gap: 0.15rem; max-width: 32rem; }
+  .sheet__link {
+    display: block; padding: 0.4rem 0;
+    font: 700 clamp(1.75rem, 1.1rem + 3.2vw, 2.75rem)/1.12 var(--font-heading);
+    letter-spacing: -0.03em;
+    opacity: 0; transform: translate3d(0, var(--distance-lg), 0);
+    transition: opacity var(--duration-fast) var(--ease-sharp), transform var(--duration-fast) var(--ease-sharp);
+  }
+  .sheet[data-open="true"] .sheet__link {
+    opacity: 1; transform: none;
+    transition:
+      opacity var(--duration-slow) var(--ease-smooth) calc(var(--i, 0) * 55ms + 160ms),
+      transform var(--spring-gentle-duration) var(--spring-gentle) calc(var(--i, 0) * 55ms + 160ms);
+  }
+  .sheet__link small { display: block; font: 500 0.8125rem/1.4 var(--font-body); letter-spacing: 0; color: rgb(255 255 255 / 0.62); }
+  .sheet__cta { margin-top: 2rem; align-self: flex-start; }
+
+  html.menu-open { overflow: hidden; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nav, .nav[data-hidden="true"] { transition: opacity var(--duration-fast) linear; }
+  .nav[data-hidden="true"] { transform: none; opacity: 0; pointer-events: none; }
+  .nav__links::before { transition: opacity var(--duration-fast) linear; }
+  .sheet { clip-path: none; opacity: 0; transition: opacity var(--duration-fast) linear, visibility 0s linear var(--duration-fast); }
+  .sheet[data-open="true"] { clip-path: none; opacity: 1; transition: opacity var(--duration-fast) linear, visibility 0s; }
+  .sheet__link, .sheet[data-open="true"] .sheet__link { transform: none; transition: opacity var(--duration-fast) linear; transition-delay: 0ms; }
+  .nav__burger span, .nav__burger { transition: none; }
+}

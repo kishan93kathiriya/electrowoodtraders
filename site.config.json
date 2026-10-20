@@ -1,0 +1,8 @@
+{
+  "_readme": "Single place for values the source files do not contain. Empty = the matching CTA is omitted at build (no dead links, no invented numbers). Fill in, run `npm run build`.",
+  "siteUrl": "https://www.electrogroup.in",
+  "email": "electroenterprise88@gmail.com",
+  "whatsappNumber": "",
+  "phone": "",
+  "catalogueUrl": ""
+}

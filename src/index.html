@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en-IN">
+<head>
+<!-- @include partials/head-assets.html -->
+<title>ELECTRO — Premium Electrical Accessories | Ahmedabad, India</title>
+<meta name="description" content="Manufacturer of modular plates, concealed &amp; surface boxes, wiring accessories, MCB boxes, power strips and LED foot lights. ISO 9001:2015. Ahmedabad, since 1979.">
+<link rel="canonical" href="{{siteUrl}}/">
+<link rel="preload" as="image" href="/assets/img/hero-still-m.webp" media="(max-width: 767px), (max-width: 1023px) and (orientation: portrait)" fetchpriority="high">
+<link rel="preload" as="image" href="/assets/img/hero-still.webp" media="(min-width: 768px) and (orientation: landscape), (min-width: 1024px)" fetchpriority="high">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ELECTRO — Electro Enterprise">
+<meta property="og:title" content="ELECTRO — Premium Electrical Accessories">
+<meta property="og:description" content="Modular plates, boxes, wiring, distribution, power and lighting — manufactured in Ahmedabad since 1979. ISO 9001:2015 certified.">
+<meta property="og:url" content="{{siteUrl}}/">
+<meta property="og:image" content="{{siteUrl}}/assets/img/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="A lit light bulb with six ELECTRO products — plates, boxes, wiring, distribution, power and lighting — orbiting it">
+<meta property="og:locale" content="en_IN">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="ELECTRO — Premium Electrical Accessories">
+<meta name="twitter:description" content="Modular plates, boxes, wiring, distribution, power and lighting — manufactured in Ahmedabad since 1979.">
+<meta name="twitter:image" content="{{siteUrl}}/assets/img/og-image.jpg">
+<meta name="twitter:image:alt" content="A lit light bulb with six ELECTRO products — plates, boxes, wiring, distribution, power and lighting — orbiting it">
+<!-- @include partials/jsonld-org.html -->
+</head>
+<body>
+<!-- @include partials/header.html -->
+
+<main id="main">
+
+  <!-- ===================================================================
+       HERO — "The Dark Room". #hero[data-light] is the single source of state.
+       The canvas + stage are decoration (aria-hidden). All words are real markup.
+       =================================================================== -->
+  <section class="hero" id="hero" data-theme="dark" data-nav-theme="dark" data-light="on" aria-labelledby="hero-title" data-hero-src="/assets/js/dist/hero-three.js?v={{heroV}}">
+    <div class="hero__pin" data-pin>
+
+      <div class="hero__stage">
+        <picture class="hero__still-wrap">
+          <source media="(max-width: 767px), (max-width: 1023px) and (orientation: portrait)" srcset="/assets/img/hero-still-m.webp" width="860" height="1500">
+          <img class="hero__still" src="/assets/img/hero-still.webp" width="1600" height="1000" alt="A lit light bulb with six ELECTRO products — plates, boxes, wiring, distribution, power and lighting — orbiting it" fetchpriority="high" decoding="async">
+        </picture>
+        <div class="hero__sweep" aria-hidden="true"></div>
+        <div class="hero__bloom" aria-hidden="true"></div>
+        <canvas class="hero__canvas" aria-hidden="true" data-canvas></canvas>
+        <div class="hero__plabels" aria-hidden="true" data-plabels></div>
+        <div class="pop" role="presentation" aria-hidden="true" data-pop hidden></div>
+      </div>
+
+      <div class="hero__fade" data-fade>
+        <div class="hero__inner wrap">
+          <div class="hero__copy">
+            <h1 class="hero__title" id="hero-title">
+              <span class="hero__kicker rise" style="--i:0">Premium electrical accessories<span class="sr-only">: </span></span>
+              <span class="hero__line"><span style="--i:0">Made to</span></span>
+              <span class="hero__line"><span class="hero__burn" style="--i:1">switch on.</span></span>
+            </h1>
+            <p class="hero__lede rise" style="--i:1">Modular plates, boxes, wiring, distribution, power and lighting — manufactured in Ahmedabad since {{founded}}.</p>
+            <div class="hero__ctas rise" style="--i:2">
+              <a class="btn btn--primary" href="{{quoteHref}}" data-magnetic>Request a Quote</a>
+              <a class="btn btn--ghost" href="#index">Browse the catalogue <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M8 3v10M4 9l4 4 4-4"/></svg></a>
+            </div>
+            <ul class="hero__creds rise" style="--i:3">
+              <li>{{iso}} certified</li>
+              <li>Made in India</li>
+              <li>Since {{founded}}</li>
+            </ul>
+          </div>
+
+          <div class="hero__anchor" aria-hidden="true" data-anchor></div>
+
+          <div class="hero__switch rise" style="--i:4">
+            <button class="toggle glass" type="button" role="switch" aria-checked="true" id="light-switch" data-switch>
+              <span class="toggle__track" aria-hidden="true"><span class="toggle__thumb"></span></span>
+              <span class="toggle__text"><span class="toggle__name">Light</span><span class="toggle__state" aria-hidden="true" data-state-text>On</span></span>
+            </button>
+            <button class="pausebtn glass" type="button" aria-pressed="false" aria-label="Pause orbit motion" data-pause>
+              <svg class="pausebtn__pause" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><rect x="3.5" y="2.5" width="3" height="11" rx="1"/><rect x="9.5" y="2.5" width="3" height="11" rx="1"/></svg>
+              <svg class="pausebtn__play" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M4.5 2.8v10.4a.5.5 0 0 0 .77.42l8-5.2a.5.5 0 0 0 0-.84l-8-5.2a.5.5 0 0 0-.77.42Z"/></svg>
+            </button>
+            <p class="hero__hint" aria-hidden="true">Tap the light.</p>
+            <p class="sr-only" role="status" aria-live="polite" data-status></p>
+          </div>
+        </div>
+
+        <nav class="hero__cats" aria-label="Browse ranges">
+          <div class="wrap">
+            <ul>
+              <li><a style="--i:0" href="#range-modular-switches-plates" data-planet="modular-switches-plates">Switches &amp; Plates</a></li>
+              <li><a style="--i:1" href="#range-concealed-surface-boxes" data-planet="concealed-surface-boxes">Concealed &amp; Surface Boxes</a></li>
+              <li><a style="--i:2" href="#range-wiring-accessories" data-planet="wiring-accessories">Wiring Accessories</a></li>
+              <li><a style="--i:3" href="#range-distribution-mcb-boxes" data-planet="distribution-mcb-boxes">Distribution &amp; MCB Boxes</a></li>
+              <li><a style="--i:4" href="#range-power-extension" data-planet="power-extension">Power &amp; Regulators</a></li>
+              <li><a style="--i:5" href="#range-lighting-doorbell" data-planet="lighting-doorbell">LED Foot Lights &amp; Bells</a></li>
+            </ul>
+          </div>
+        </nav>
+        <div class="hero__cue" aria-hidden="true">Scroll <i></i></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- orrery data for the 3D scene (decoration only — the same facts exist as real HTML in #tour and #index) -->
+  <!-- @render orreryData -->
+
+  <!-- ===================================================================
+       TOUR — the six ranges. In the cinematic hero this list is moved into the pinned
+       stage and revealed one beat at a time; without JS / 3D it stays here as a normal grid.
+       =================================================================== -->
+  <section class="section tour" id="tour" data-theme="dark" data-nav-theme="dark" aria-labelledby="tour-h">
+    <div class="tour__inner wrap" data-tour>
+      <div class="tour__head">
+        <p class="eyebrow">Product ranges</p>
+        <h2 class="h2" id="tour-h">Six ranges. One system.</h2>
+        <p class="lede">{{count:total:families}} ranges and {{count:total:skus}} products — from concealed boxes to LED foot lights, made in Ahmedabad.</p>
+      </div>
+      <div class="tour__list" data-tour-list>
+        <!-- @render tourArticles -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       MANIFESTO — the sentence lights up word by word as you scroll
+       =================================================================== -->
+  <section class="section manifesto" data-theme="dark" data-nav-theme="dark" aria-label="About Electro">
+    <div class="wrap wrap--reading">
+      <!-- @render manifesto -->
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       PRODUCT INDEX — all families, straight from products.json
+       =================================================================== -->
+  <section class="section index" id="index" data-theme="light" data-nav-theme="light" aria-labelledby="index-h">
+    <div class="wrap">
+      <div class="wrap--reading">
+        <p class="eyebrow" data-reveal>Product index</p>
+        <h2 class="h2" id="index-h" data-reveal style="--i:1">Every range, in one place.</h2>
+        <p class="lede" data-reveal style="--i:2">All {{count:total:families}} product families with their code counts and MRP range. Search by name or by product code.</p>
+      </div>
+      <!-- @render productIndex -->
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       TRUST — 43 years · ISO 9001:2015 · Made in India (all from the sources)
+       =================================================================== -->
+  <section class="section trust" id="trust" data-theme="deep" data-nav-theme="dark" aria-labelledby="trust-h">
+    <div class="wrap">
+      <div class="trust__head">
+        <p class="eyebrow" data-reveal>Why Electro</p>
+        <h2 class="h2" id="trust-h" data-reveal style="--i:1">Four decades. One standard.</h2>
+        <p class="lede" data-reveal style="--i:2">Founded in {{founded}} by {{founder}} in Ahmedabad as a very small manufacturing unit, Electro is today an {{iso}} certified manufacturer.</p>
+      </div>
+
+      <div class="trust__grid">
+        <div class="stat" data-reveal style="--i:0"><span class="rule" aria-hidden="true"></span>
+          <p class="stat__fig"><span data-count-to="{{years}}">{{years}}</span><span class="stat__unit">years</span></p>
+          <p class="stat__cap"><strong>Of experience</strong> in the electrical industry.</p>
+        </div>
+        <div class="stat" data-reveal style="--i:1"><span class="rule" aria-hidden="true"></span>
+          <p class="stat__fig"><span>ISO</span><span class="stat__unit">9001:2015</span></p>
+          <p class="stat__cap"><strong>Certified company,</strong> as stated in our Catalogue ’26.</p>
+        </div>
+        <div class="stat" data-reveal style="--i:2"><span class="rule" aria-hidden="true"></span>
+          <p class="stat__fig"><span data-count-to="{{count:total:skus}}">{{count:total:skus}}</span><span class="stat__unit">products</span></p>
+          <p class="stat__cap"><strong data-count-to="{{count:total:families}}">{{count:total:families}}</strong> ranges across six categories, priced and packed in the trade catalogue.</p>
+        </div>
+        <div class="stat" data-reveal style="--i:3"><span class="rule" aria-hidden="true"></span>
+          <p class="stat__fig stat__fig--word"><span>Made in India</span></p>
+          <p class="stat__cap"><strong>Manufactured</strong> in Ahmedabad, Gujarat.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       BRANDS — the seven sub-brands in products.json
+       =================================================================== -->
+  <section class="section brands" data-theme="white" data-nav-theme="light" aria-labelledby="brands-h">
+    <div class="wrap">
+      <p class="eyebrow" data-reveal>Our brands</p>
+      <h2 class="h2" id="brands-h" data-reveal style="--i:1">Seven brands. One maker.</h2>
+      <!-- @render marquee -->
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       DEALER CTA — the wire arrives and the primary button powers on
+       =================================================================== -->
+  <section class="section dealer" id="dealer" data-theme="dark" data-nav-theme="dark" aria-labelledby="dealer-h">
+    <svg class="dealer__wire" aria-hidden="true" focusable="false" data-wire><path class="rail" d=""/><path class="live" pathLength="1" d=""/></svg>
+    <div class="wrap dealer__inner">
+      <div class="dealer__copy">
+        <p class="eyebrow" data-reveal>Dealers &amp; distributors</p>
+        <h2 class="dealer__h" id="dealer-h" data-reveal style="--i:1">Bring Electro to your counter.</h2>
+        <p class="lede" data-reveal style="--i:2">Become an Electro dealer, or request pricing and packing details for any product code.</p>
+      </div>
+      <div class="dealer__actions" data-reveal style="--i:3">
+        <a class="btn btn--primary" href="{{dealerHref}}" data-wire-target data-magnetic>Become a Dealer</a>
+        <a class="btn btn--ghost" href="{{quoteHref}}">Request a Quote</a>
+        <!-- @if whatsappHref --><a class="btn btn--ghost" href="{{whatsappHref}}" rel="noopener">Enquire on WhatsApp</a><!-- @endif -->
+        <!-- @if catalogueUrl --><a class="btn btn--ghost" href="{{catalogueUrl}}">Download Catalogue</a><!-- @endif -->
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- @include partials/footer.html -->
+
+<script type="module" src="/assets/js/dist/nav.js?v={{navV}}"></script>
+<script type="module" src="/assets/js/dist/home.js?v={{homeV}}"></script>
+</body>
+</html>
