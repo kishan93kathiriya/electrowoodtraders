@@ -21,7 +21,7 @@ let bad = 0;
 const check = (label, ok) => { console.log(`${ok ? '  ok ' : ' FAIL'}  ${label}`); if (!ok) bad++; };
 
 for (const r of rows) {
-  check(`${r.name}: ${r.families} ranges · ${r.skus} products`, html.includes(`${r.families} ranges · ${r.skus} products`) && html.includes(`/${r.id}/`));
+  check(`${r.name}: ${r.families} ranges · ${r.skus} products`, html.includes(`${r.families} ranges · ${r.skus} products`) && html.includes(`href="${r.id}/index.html"`));
 }
 // ---- product index: every one of the families, with its own code count + MRP range ----------
 const cards = html.split('<li class="pcard"').slice(1);   // split on the boundary: cards contain nested <li> finish chips
@@ -29,7 +29,7 @@ check(`index renders ${data.families.length} family cards (found ${cards.length}
 const num = (s) => Number(String(s).replace(/[₹,\s]/g, ''));
 let cardBad = 0;
 for (const f of data.families) {
-  const card = cards.find((c) => c.includes(`href="/${f.category}/${f.id}/"`));
+  const card = cards.find((c) => c.includes(`href="${f.category}/${f.id}/index.html"`));
   const mrps = f.variants.map((v) => v.mrp);
   const lo = Math.min(...mrps), hi = Math.max(...mrps);
   const codes = card && (card.match(/<span>(\d+) codes<\/span>/) || [])[1];

@@ -18,8 +18,8 @@ if (nav) {
   /* ---- current page --------------------------------------------------- */
   const path = location.pathname.replace(/index\.html$/, '');
   $$('.nav__link', nav).forEach((a) => {
-    const href = a.getAttribute('href');
-    if (href !== '/' && path.startsWith(href)) a.setAttribute('aria-current', 'page');
+    const target = new URL(a.href).pathname.replace(/index\.html$/, '');   // hrefs are page-relative, so resolve first
+    if (path.startsWith(target)) a.setAttribute('aria-current', 'page');
   });
 
   /* ---- theme: which surface is under the capsule? ---------------------- */

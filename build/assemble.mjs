@@ -75,6 +75,12 @@ function render(str, depth = 0) {
   return str;
 }
 
+/* Page links are emitted relative to the page (like assets above) so the site works from ANY base path —
+   the domain root, a GitHub Pages project URL (/electrowoodtraders/), or straight from disk.
+   "/"  → index.html    "/x/" → x/index.html    "/about.html#top" → about.html#top    (external URLs untouched) */
+const relLinks = (html, prefix) =>
+  html.replace(/(\shref=")\/(?!\/)([^"#]*)(#[^"]*)?"/g, (_, a, path, hash = '') => `${a}${prefix}${path === '' || path.endsWith('/') ? path + 'index.html' : path}${hash}"`);
+
 function* pages(dir) {
   for (const name of readdirSync(join(root, dir))) {
     const p = join(dir, name);
@@ -87,10 +93,10 @@ let n = 0;
 const urls = [];
 for (const src of pages('src')) {
   const out = relative('src', src);
-  // Asset URLs are emitted relative to the page's depth, so a page renders correctly from a
-  // static host AND when opened straight from disk. (Page-to-page links stay root-relative.)
+  // Asset URLs AND page links are emitted relative to the page's depth, so a page renders and navigates
+  // correctly from a static host, a sub-path host (GitHub Pages project URL) and straight from disk.
   const prefix = '../'.repeat(out.split('/').length - 1);
-  const html = render(read(src)).replace(/(["',\s(])\/assets\//g, `$1${prefix}assets/`);
+  const html = relLinks(render(read(src)).replace(/(["',\s(])\/assets\//g, `$1${prefix}assets/`), prefix);
   mkdirSync(dirname(join(root, out)), { recursive: true });
   writeFileSync(join(root, out), html);
   console.log(`  ${src}  ->  ${out}  (${(html.length / 1024).toFixed(1)} KB)`);
